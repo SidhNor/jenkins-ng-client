@@ -1,29 +1,76 @@
-/* app css stylesheet */
+/* line 6, ../sass/_meyer-reset.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+/* line 14, ../sass/_meyer-reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 16, ../sass/_meyer-reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 18, ../sass/_meyer-reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 20, ../sass/_meyer-reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 23, ../sass/_meyer-reset.scss */
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 27, ../sass/_meyer-reset.scss */
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../sass/_meyer-reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 3, ../sass/app.scss */
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
   margin-bottom: 2em;
   padding: 0 0 0.5em;
 }
-
+/* line 8, ../sass/app.scss */
 .menu:before {
   content: "[";
 }
-
+/* line 11, ../sass/app.scss */
 .menu:after {
   content: "]";
 }
-
+/* line 14, ../sass/app.scss */
 .menu > li {
   display: inline;
 }
-
+/* line 16, ../sass/app.scss */
 .menu > li:before {
   content: "|";
   padding-right: 0.3em;
 }
-
+/* line 20, ../sass/app.scss */
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;

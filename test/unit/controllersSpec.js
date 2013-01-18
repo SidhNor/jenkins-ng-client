@@ -6,9 +6,8 @@ describe('MyCtrl1', function(){
   var myCtrl1;
 
   beforeEach(function(){
-    myCtrl1 = new MyCtrl1();
+    myCtrl1 = {};
   });
-
 
   it('should ....', function() {
     //spec body

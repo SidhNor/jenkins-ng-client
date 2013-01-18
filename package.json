@@ -1,0 +1,21 @@
+{
+  "author": "https://github.com/SidhNor/jenkins-angularjs-client/graphs/contributors",
+  "name": "jenkins-angularjs-client",
+  "description": "Responsive Angular JS client for ugly but usefull Jenins",
+  "version": "0.0.1",
+  "homepage": "https://github.com/SidhNor/jenkins-angularjs-client",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/SidhNor/jenkins-angularjs-client.git"
+  },
+  "engines": {
+    "node": ">= 0.8.4"
+  },
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "testacular": "~0.4.0",
+    "jasmine-node": "*"
+  }
+}
