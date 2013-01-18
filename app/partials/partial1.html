@@ -1,1 +1,11 @@
 <p>This is the partial for view 1.</p>
+<ul>
+    <li ng-repeat="view in views.views">
+    	{{view.name}}
+		<ul>
+			<li ng-repeat="job in view.jobs">
+				{{job.name}}
+			</li>
+		</ul>
+    </li>
+  </ul>
