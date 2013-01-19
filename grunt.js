@@ -78,7 +78,7 @@ module.exports = function (grunt) {
     var done = this.async();
     grunt.utils.spawn({
       cmd: process.platform === 'win32' ? 'testacular.cmd' : 'testacular',
-      args: process.env.TRAVIS ? ['start', 'config/testacular.conf.js', '--single-run', '--no-auto-watch', '--reporter=dots', '--browsers=Firefox'] : ['run']
+      args: process.env.TRAVIS ? ['start', 'config/testacular.conf.js', '--single-run', '--no-auto-watch', '--reporters=dots', '--browsers=Firefox'] : ['run']
     }, function (error, result, code) {
       if (error) {
         grunt.warn("Make sure the testacular server is online: run `grunt server`.\n" +
