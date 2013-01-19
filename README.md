@@ -1,0 +1,1 @@
+# jenkins-ng-client - Responsive [AngularJS](http://angularjs.org/) based client application for ugly but usefull [Jenkins CI](http://jenkins-ci.org/)
