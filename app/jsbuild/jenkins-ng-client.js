@@ -1,7 +1,7 @@
 /**
  * Responsive Angular JS client for ugly but usefull Jenins
  * @version v0.0.1 - 2013-01-19
- * @link https://github.com/SidhNor/jenkins-angularjs-client
+ * @link https://github.com/SidhNor/jenkins-ng-client
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
 
@@ -48,7 +48,6 @@ function MyCtrl2() {
 angular.module('jenkinsClient.filters', []).filter('interpolate', 
 	[]
 );
-
 'use strict';
 
 /* Directives */
