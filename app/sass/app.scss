@@ -1,2 +1,68 @@
 @import "meyer-reset";
 
+body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	color: #333;
+	
+}
+
+a {
+	text-decoration: none;
+	color: #08c;
+}
+
+.menu {
+	float: left;
+	position: relative;
+	width: 220px;
+	z-index: 16;
+	background-color: #444444;
+}
+
+footer {
+	text-align: center;
+}
+
+.nav {
+	list-style: none;
+	margin: 10px 0 0;
+	padding: 0;
+	border-top: 1px solid #393939;
+	border-bottom: 1px solid #4E4E4E;
+
+	> li {
+		display: block;
+		position: relative;
+		border-top: 1px solid #4E4E4E;
+		border-bottom: 1px solid #393939;
+
+		> a {
+			padding: 10px 0 10px 15px;
+			display: block;
+			color: #DDD;
+		}
+		> a:hover, > a:active {
+			background-color: #4A4A4A
+		}
+	}
+}
+
+.menu, .content {
+	min-height: 500px;
+	padding-bottom: 25px;	
+}
+
+.content {
+	background: none repeat scroll 0 0 #eeeeee;
+	margin-left: 220px;
+	margin-right: 0;
+	position: relative;
+	width: auto;
+	border-top-left-radius: 8px;
+}
+
+li {
+	line-height: 20px;
+}

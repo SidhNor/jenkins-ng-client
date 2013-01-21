@@ -32,8 +32,8 @@ module.exports = function (grunt) {
       files: ['app/js/**/*.js']
     },
     watch: {
-      files: ['app/**/*.js', 'test/unit/**/*.js', 'test/e2e/*/**.js'],
-      tasks: 'lint build test'
+      files: ['app/**/*.js', 'test/unit/**/*.js', 'test/e2e/*/**.js', 'app/index.html'],
+      tasks: 'lint build deploy test'
     },
     jshint: {
       options: {

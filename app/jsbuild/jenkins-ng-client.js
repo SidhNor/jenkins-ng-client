@@ -11,10 +11,10 @@
 
 // Declare app level module which depends on filters, and services
 angular.module('jenkinsClient', ['jenkinsClient.filters', 'jenkinsClient.services', 'jenkinsClient.directives']).config(
-	['$routeProvider', '$provide', '$httpProvider', function ($routeProvider, $provide, $httpProvider) {
-		$routeProvider.when('/view1', {templateUrl: 'views/partial1.html', controller: MyCtrl1});
-		$routeProvider.when('/view2', {templateUrl: 'views/partial2.html', controller: MyCtrl2});
-		$routeProvider.otherwise({redirectTo: '/view1'});
+	['$routeProvider', '$provide', '$locationProvider', function ($routeProvider, $provide, $locationProvider) {
+		$routeProvider.when('/plugin/ng/index.html', {templateUrl: '/plugin/ng/views/partial1.html', controller: MyCtrl1});
+		$routeProvider.otherwise({redirectTo: '/plugin/ng/index.html'});
+		$locationProvider.html5Mode(true);
 	}]
 );	
 
@@ -25,13 +25,30 @@ angular.module('jenkinsClient', ['jenkinsClient.filters', 'jenkinsClient.service
 var serviceModule = angular.module('jenkinsClient.services', ['ngResource']);
 serviceModule.value('version', '0.1');
 serviceModule.factory('View', function($resource){
-	return $resource('http://mdch-det-dev01::port/api/json?tree=views[name,jobs[name]]', {port: '8080'}, {
+	return $resource('/api/json', {tree: 'views[name,jobs[name]]'}, {
 		query: {method: 'GET', params: {}, isArray: false}
 	});
 });
 'use strict';
 
 /* Controllers */
+
+
+function MenuCtrl($scope) {
+	$scope.links = [
+		{
+			src: 'test.html',
+			label: 'New job'
+		},
+		{
+			src: 'test.html',
+			label: 'People'
+		}
+	];
+	$scope.launchTask = function (val) {
+
+	};
+}
 
 function MyCtrl1($scope, View) {
 
