@@ -7,6 +7,7 @@ module.exports = function (grunt) {
   // Project configuration.
   grunt.initConfig({
     builddir: 'app/jsbuild',
+    deploydir: 'I:/Jenkins/plugins/ng/',
     pkg: '<json:package.json>',
     meta: {
       banner: '/**\n' + ' * <%= pkg.description %>\n' +
@@ -93,5 +94,27 @@ module.exports = function (grunt) {
         done();
       }
     });
+  });
+
+  grunt.registerTask('deploy', 'Deploy site to jenkins directory', function() {
+    grunt.file.expand('app/css/*.*').forEach(function(path) {
+      grunt.file.copy(path, grunt.config('deploydir') + path.replace(/app/ ,''));
+    });
+
+    grunt.file.expand('app/jsbuild/*.*').forEach(function(path) {
+      grunt.file.copy(path, grunt.config('deploydir') + path.replace(/app/ ,''));
+    });
+
+    grunt.file.expand('app/views/*.*').forEach(function(path) {
+      grunt.file.copy(path, grunt.config('deploydir') + path.replace(/app/ ,''));
+    });
+
+    grunt.file.expand('app/lib/*/*.*').forEach(function(path) {
+      grunt.file.copy(path, grunt.config('deploydir') + path.replace(/app/ ,''));
+    });   
+
+    grunt.file.expand('app/index.html').forEach(function(path) {
+      grunt.file.copy(path, grunt.config('deploydir') + path.replace(/app/ ,''));
+    });    
   });
 };
