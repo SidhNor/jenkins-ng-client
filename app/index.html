@@ -18,7 +18,19 @@
     </ul>
   </aside>
 
-  <section ng-view class="content">
+  <section class="content">
+    <header>
+      <h1>{{title}}</h1>
+    </header>
+    <div class="breadcrumb">
+      <ul>
+        <li ng-repeat="crumb in crumbs">
+          <a href="#">{{crumb.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <artile ng-view>
+    </article>
   </section>
   
   <footer class="clearfix">&copy; 2013 Powered by <a href="http://angularjs.org/">AngularJS</a>. Brought by <a href="https://github.com/SidhNor">SidhNor</a>

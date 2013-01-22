@@ -1,8 +1,8 @@
 {
   "author": "https://github.com/SidhNor/jenkins-ng-client/graphs/contributors",
   "name": "jenkins-ng-client",
-  "description": "Responsive Angular JS client for ugly but usefull Jenins",
-  "version": "0.0.1",
+  "description": "Responsive Angular JS client for Jenins",
+  "version": "0.0.2",
   "homepage": "https://github.com/SidhNor/jenkins-ng-client",
   "repository": {
     "type": "git",

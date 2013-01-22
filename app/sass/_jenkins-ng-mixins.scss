@@ -1,0 +1,29 @@
+/*Default values*/
+
+$jenkins-ng-font-size : 14px;
+$jenkins-ng-line-height: 20px;
+$jenkins-ng-aside-width: 220px;
+$jenkins-ng-hero-radius: 8px;
+$jenkins-ng-header-height: 77px;
+
+$jenkins-ng-default-border-thickness: 1px;
+$jenkins-ng-default-border-style: solid;
+$jenkins-ng-default-border-color: #393939;
+
+$default-box-shadow-color : #333333;
+$default-box-shadow-v-offset : 1px;
+$default-box-shadow-blur : 3px;
+
+/*Default values*/
+
+@mixin ng-border-side(
+  $side,
+  $color    : $jenkins-ng-default-border-color,
+  $thickness: $jenkins-ng-default-border-thickness,
+  $style    : $jenkins-ng-default-border-style
+){
+  @if not ($side == top or $side == left or $side == right or $side == bottom) {
+    @warn "$side expected to be one of the top/left/bottom/right values";
+  }
+  border-#{$side} : $thickness $style $color;
+}

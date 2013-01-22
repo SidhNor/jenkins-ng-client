@@ -7,16 +7,28 @@ function MenuCtrl($scope) {
 	$scope.links = [
 		{
 			src: 'test.html',
-			label: 'New job'
+			label: 'New job',
+			iconClass: ''
 		},
 		{
 			src: 'test.html',
-			label: 'People'
+			label: 'People',
+			iconClass: ''
 		}
 	];
 	$scope.launchTask = function (val) {
 
 	};
+}
+
+function ActionsCtrl($scope) {
+	$scope.actions = [
+		{
+			title: '',
+			tooltipText: '',
+			iconClass: ''
+		}
+	];
 }
 
 function MyCtrl1($scope, View) {

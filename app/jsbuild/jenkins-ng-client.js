@@ -1,6 +1,6 @@
 /**
  * Responsive Angular JS client for ugly but usefull Jenins
- * @version v0.0.1 - 2013-01-21
+ * @version v0.0.1 - 2013-01-22
  * @link https://github.com/SidhNor/jenkins-ng-client
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -23,7 +23,7 @@ angular.module('jenkinsClient', ['jenkinsClient.filters', 'jenkinsClient.service
 /* Services */
 
 var serviceModule = angular.module('jenkinsClient.services', ['ngResource']);
-serviceModule.value('version', '0.1');
+serviceModule.value('version', '0.0.2');
 serviceModule.factory('View', function($resource){
 	return $resource('/api/json', {tree: 'views[name,jobs[name]]'}, {
 		query: {method: 'GET', params: {}, isArray: false}
@@ -38,16 +38,28 @@ function MenuCtrl($scope) {
 	$scope.links = [
 		{
 			src: 'test.html',
-			label: 'New job'
+			label: 'New job',
+			iconClass: ''
 		},
 		{
 			src: 'test.html',
-			label: 'People'
+			label: 'People',
+			iconClass: ''
 		}
 	];
 	$scope.launchTask = function (val) {
 
 	};
+}
+
+function ActionsCtrl($scope) {
+	$scope.actions = [
+		{
+			title: '',
+			tooltipText: '',
+			iconClass: ''
+		}
+	];
 }
 
 function MyCtrl1($scope, View) {
