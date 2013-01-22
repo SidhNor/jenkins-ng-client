@@ -3,7 +3,6 @@
 @import "compass/css3/images";
 @import "compass/css3/box-shadow";
 
-
 body {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: $jenkins-ng-font-size;
@@ -31,6 +30,10 @@ body {
 a {
 	text-decoration: none;
 	color: #08c;
+}
+
+li {
+	line-height: $jenkins-ng-line-height;
 }
 
 .menu {
@@ -87,10 +90,6 @@ footer {
 		border-top-left-radius: $jenkins-ng-hero-radius;
 		height: 80px;
 	}
-}
-
-li {
-	line-height: $jenkins-ng-line-height;
 }
 
 .breadcrumb {

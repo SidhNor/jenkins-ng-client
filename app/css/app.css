@@ -1,4 +1,4 @@
-/* line 6, ../sass/_meyer-reset.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/_meyer-reset\.scss}line{font-family:\000036}}
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -8,54 +8,54 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
 }
 
-/* line 15, ../sass/_meyer-reset.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/_meyer-reset\.scss}line{font-family:\0000315}}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 18, ../sass/_meyer-reset.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/_meyer-reset\.scss}line{font-family:\0000318}}
 body {
   line-height: 1;
 }
 
-/* line 21, ../sass/_meyer-reset.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/_meyer-reset\.scss}line{font-family:\0000321}}
 ol, ul {
   list-style: none;
 }
 
-/* line 24, ../sass/_meyer-reset.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/_meyer-reset\.scss}line{font-family:\0000324}}
 blockquote, q {
   quotes: none;
 }
 
-/* line 28, ../sass/_meyer-reset.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/_meyer-reset\.scss}line{font-family:\0000328}}
 blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 34, ../sass/_meyer-reset.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/_meyer-reset\.scss}line{font-family:\0000334}}
 q:before, q:after {
   content: "";
   content: none;
 }
 
-/* line 39, ../sass/_meyer-reset.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/_meyer-reset\.scss}line{font-family:\0000339}}
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
 /* = clearfix */
-/* line 45, ../sass/_meyer-reset.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/_meyer-reset\.scss}line{font-family:\0000345}}
 .clearfix {
   *zoom: 1;
 }
-/* line 47, ../sass/_meyer-reset.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/_meyer-reset\.scss}line{font-family:\0000347}}
 .clearfix:after {
   clear: both;
 }
-/* line 50, ../sass/_meyer-reset.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/_meyer-reset\.scss}line{font-family:\0000350}}
 .clearfix:before, .clearfix:after {
   display: table;
   content: "";
@@ -63,14 +63,14 @@ table {
 
 /*Default values*/
 /*Default values*/
-/* line 7, ../sass/app.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\000036}}
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333;
 }
-/* line 12, ../sass/app.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000311}}
 body > header {
   height: 77px;
   position: relative;
@@ -86,7 +86,7 @@ body > header {
   background: linear-gradient(top, #3f3f3f 0%, #222222 100%);
   border-bottom: 1px solid #555555;
 }
-/* line 21, ../sass/app.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000320}}
 body > header > h1 {
   color: white;
   font-size: 42px;
@@ -95,13 +95,18 @@ body > header > h1 {
   font-family: CityBlueprint, Consolas, Arial;
 }
 
-/* line 31, ../sass/app.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000330}}
 a {
   text-decoration: none;
   color: #08c;
 }
 
-/* line 36, ../sass/app.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000335}}
+li {
+  line-height: 20px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000339}}
 .menu {
   float: left;
   position: relative;
@@ -112,12 +117,12 @@ a {
   padding-bottom: 25px;
 }
 
-/* line 46, ../sass/app.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000349}}
 footer {
   text-align: center;
 }
 
-/* line 50, ../sass/app.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000353}}
 .nav {
   list-style: none;
   margin: 10px 0 0;
@@ -125,25 +130,25 @@ footer {
   border-top: 1px solid #393939;
   border-bottom: 1px solid #4e4e4e;
 }
-/* line 57, ../sass/app.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000360}}
 .nav > li {
   display: block;
   position: relative;
   border-top: 1px solid #4e4e4e;
   border-bottom: 1px solid #393939;
 }
-/* line 63, ../sass/app.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000366}}
 .nav > li > a {
   padding: 10px 0 10px 15px;
   display: block;
   color: #DDD;
 }
-/* line 68, ../sass/app.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000371}}
 .nav > li > a:hover, .nav > li > a:active {
   background-color: #4a4a4a;
 }
 
-/* line 74, ../sass/app.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000377}}
 .content {
   background: none repeat scroll 0 0 #eeeeee;
   margin-left: 220px;
@@ -155,7 +160,7 @@ footer {
   min-height: 500px;
   padding-bottom: 25px;
 }
-/* line 85, ../sass/app.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000388}}
 .content > header {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
   background: -webkit-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
@@ -166,12 +171,7 @@ footer {
   height: 80px;
 }
 
-/* line 92, ../sass/app.scss */
-li {
-  line-height: 20px;
-}
-
-/* line 96, ../sass/app.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000395}}
 .breadcrumb {
   background-color: #e5e5e5;
   -webkit-box-shadow: 0px 1px 3px white;

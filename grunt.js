@@ -3,7 +3,7 @@
 var testacular = require('testacular');
 
 module.exports = function (grunt) {
-
+  grunt.loadNpmTasks( 'grunt-compass' );
   // Project configuration.
   grunt.initConfig({
     builddir: 'app/jsbuild',
@@ -32,8 +32,8 @@ module.exports = function (grunt) {
       files: ['app/js/**/*.js']
     },
     watch: {
-      files: ['app/**/*.js', 'test/unit/**/*.js', 'test/e2e/*/**.js', 'app/index.html'],
-      tasks: 'lint build test deploy'
+      files: ['app/**/*.js', 'test/unit/**/*.js', 'test/e2e/*/**.js', 'app/index.html', 'app/sass/**/*.scss'],
+      tasks: 'lint compass:dev build test deploy'
     },
     jshint: {
       options: {
@@ -48,6 +48,31 @@ module.exports = function (grunt) {
       },
       globals: {
         angular: true
+      }
+    },
+    compass: {
+      dev: {
+        src: 'app/sass',
+        dest: 'app/css',
+        linecomments: true,
+        forcecompile: true,
+        debugsass: true,
+        images: 'app/img',
+        relativeassets: true
+      },
+      prod: {
+        src: 'app/sass',
+        dest: 'app/css',
+        outputstyle: 'compressed',
+        linecomments: false,
+        forcecompile: true,
+        require: [
+          'animate-sass',
+          'mylib'
+        ],
+        debugsass: false,
+        images: 'app/img',
+        relativeassets: true
       }
     }
   });
