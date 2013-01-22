@@ -21,6 +21,10 @@ function MenuCtrl($scope) {
 	};
 }
 
+function BuildQueueCtrl($scope) {
+
+}
+
 function ActionsCtrl($scope) {
 	$scope.actions = [
 		{
