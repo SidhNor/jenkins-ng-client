@@ -1,6 +1,6 @@
 /**
  * Responsive Angular JS client for Jenins
- * @version v0.0.2 - 2013-01-22
+ * @version v0.0.2 - 2013-01-23
  * @link https://github.com/SidhNor/jenkins-ng-client
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */

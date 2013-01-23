@@ -1,22 +1,22 @@
 {
-  "author": "https://github.com/SidhNor/jenkins-ng-client/graphs/contributors",
-  "name": "jenkins-ng-client",
-  "description": "Responsive Angular JS client for Jenins",
-  "version": "0.0.2",
-  "homepage": "https://github.com/SidhNor/jenkins-ng-client",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/SidhNor/jenkins-ng-client.git"
-  },
-  "engines": {
-    "node": ">= 0.8.4"
-  },
-  "dependencies": {
-    
-  },
-  "devDependencies": {
-    "testacular": "~0.4.0",
-    "jasmine-node": "*",
-    "grunt-compass": "*"
-  }
+	"author": "https://github.com/SidhNor/jenkins-ng-client/graphs/contributors",
+	"name": "jenkins-ng-client",
+	"description": "Responsive Angular JS client for Jenins",
+	"version": "0.0.2",
+	"homepage": "https://github.com/SidhNor/jenkins-ng-client",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/SidhNor/jenkins-ng-client.git"
+	},
+	"engines": {
+		"node": ">= 0.8.4"
+	},
+	"dependencies": {
+		
+	},
+	"devDependencies": {
+		"testacular": "~0.4.0",
+		"jasmine-node": "*",
+		"grunt-compass": "*"
+	}
 }

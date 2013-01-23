@@ -17,13 +17,13 @@ $default-box-shadow-blur : 3px;
 /*Default values*/
 
 @mixin ng-border-side(
-  $side,
-  $color    : $jenkins-ng-default-border-color,
-  $thickness: $jenkins-ng-default-border-thickness,
-  $style    : $jenkins-ng-default-border-style
+	$side,
+	$color    : $jenkins-ng-default-border-color,
+	$thickness: $jenkins-ng-default-border-thickness,
+	$style    : $jenkins-ng-default-border-style
 ){
-  @if not ($side == top or $side == left or $side == right or $side == bottom) {
-    @warn "$side expected to be one of the top/left/bottom/right values";
-  }
-  border-#{$side} : $thickness $style $color;
+	@if not ($side == top or $side == left or $side == right or $side == bottom) {
+		@warn "$side expected to be one of the top/left/bottom/right values";
+	}
+	border-#{$side} : $thickness $style $color;
 }

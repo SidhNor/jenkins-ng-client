@@ -1,45 +1,45 @@
 <!doctype html>
 <html lang="en" ng-app="jenkinsClient">
 <head>
-  <meta charset="utf-8">
-  <title>Jenkins Angular Client</title>
-  <link rel="stylesheet" href="css/app.css"/>
+	<meta charset="utf-8">
+	<title>Jenkins Angular Client</title>
+	<link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
-  <header>
-    <h1>Jenkins</h1>
-  </header>
-  <aside ng-controller="MenuCtrl" class="menu">
-    <ul class="nav">
-      <li ng-repeat="link in links">
-        <i ng-class="link.iconClass"></i>
-        <a ng-click="launchTask(link)">{{link.label}}</a>
-      </li>
-    </ul>
-  </aside>
+	<header>
+		<h1>Jenkins</h1>
+	</header>
+	<aside ng-controller="MenuCtrl" class="menu">
+		<ul class="nav">
+			<li ng-repeat="link in links">
+				<i ng-class="link.iconClass"></i>
+				<a ng-click="launchTask(link)">{{link.label}}</a>
+			</li>
+		</ul>
+	</aside>
 
-  <section class="content">
-    <header>
-      <h1>{{title}}</h1>
-    </header>
-    <div class="breadcrumb">
-      <ul>
-        <li ng-repeat="crumb in crumbs">
-          <a href="#">{{crumb.name}}</a>
-        </li>
-      </ul>
-    </div>
-    <artile ng-view>
-    </article>
-  </section>
-  
-  <footer class="clearfix">&copy; 2013 Powered by <a href="http://angularjs.org/">AngularJS</a>. Brought by <a href="https://github.com/SidhNor">SidhNor</a>
-    <div app-version></div>
-  </footer>
+	<section class="content">
+		<header>
+			<h1>{{title}}</h1>
+		</header>
+		<div class="breadcrumb">
+			<ul>
+		  		<li ng-repeat="crumb in crumbs">
+					<a href="#">{{crumb.name}}</a>
+				</li>
+			</ul>
+		</div>
+		<artile ng-view>
+		</article>
+	</section>
 
-  <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
-  <script src="lib/angular/angular.js"></script>
-  <script src="lib/angular/angular-resource.js"></script>
-  <script src="jsbuild/jenkins-ng-client.js"></script>
+	<footer class="clearfix">&copy; 2013 Powered by <a href="http://angularjs.org/">AngularJS</a>. Brought by <a href="https://github.com/SidhNor">SidhNor</a>
+		<div app-version></div>
+	</footer>
+
+	<script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular/angular-resource.js"></script>
+	<script src="jsbuild/jenkins-ng-client.js"></script>
 </body>
 </html>

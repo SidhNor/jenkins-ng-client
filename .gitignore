@@ -35,3 +35,9 @@ node_modules
 ############
 
 .sass-cache
+
+############
+## Sublime project file
+############
+
+*.sublime-*
