@@ -79,7 +79,7 @@ module.exports = function (grunt) {
 	});
 
 	// Default task.
-	grunt.registerTask('default', 'lint compass:dev build test deploy');
+	grunt.registerTask('default', process.env.TRAVIS ? 'lint build test' : 'lint compass:dev build test deploy');
 
 	grunt.registerTask('build', 'build all', function () {
 

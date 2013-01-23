@@ -10,3 +10,4 @@ angular.module('jenkinsClient', ['jenkinsClient.filters', 'jenkinsClient.service
 		$locationProvider.html5Mode(true);
 	}]
 );	
+

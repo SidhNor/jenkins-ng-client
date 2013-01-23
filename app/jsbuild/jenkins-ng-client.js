@@ -18,6 +18,7 @@ angular.module('jenkinsClient', ['jenkinsClient.filters', 'jenkinsClient.service
 	}]
 );	
 
+
 'use strict';
 
 /* Services */
