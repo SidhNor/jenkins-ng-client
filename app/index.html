@@ -9,7 +9,7 @@
 	<header>
 		<h1>Jenkins</h1>
 	</header>
-	<aside ng-controller="MenuCtrl" class="menu">
+	<aside ng-controller="MenuCtrl" class="menu" ng-class="{disabled: !enabled}">
 		<ul class="nav">
 			<li ng-repeat="link in links">
 				<i ng-class="link.iconClass"></i>

@@ -4,6 +4,8 @@
 
 
 function MenuCtrl($scope) {
+	$scope.enabled = false;
+
 	$scope.links = [
 		{
 			src: 'test.html',
@@ -16,13 +18,14 @@ function MenuCtrl($scope) {
 			iconClass: ''
 		}
 	];
+	
 	$scope.launchTask = function (val) {
 
 	};
 }
 
 function BuildQueueCtrl($scope) {
-
+	
 }
 
 function ActionsCtrl($scope) {

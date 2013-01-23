@@ -1,6 +1,6 @@
 /**
  * Responsive Angular JS client for Jenins
- * @version v0.0.2 - 2013-01-23
+ * @version v0.0.2 - 2013-01-24
  * @link https://github.com/SidhNor/jenkins-ng-client
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -36,6 +36,8 @@ serviceModule.factory('View', function($resource){
 
 
 function MenuCtrl($scope) {
+	$scope.enabled = false;
+
 	$scope.links = [
 		{
 			src: 'test.html',
@@ -48,13 +50,14 @@ function MenuCtrl($scope) {
 			iconClass: ''
 		}
 	];
+	
 	$scope.launchTask = function (val) {
 
 	};
 }
 
 function BuildQueueCtrl($scope) {
-
+	
 }
 
 function ActionsCtrl($scope) {
