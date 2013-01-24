@@ -12,8 +12,7 @@
 // Declare app level module which depends on filters, and services
 angular.module('jenkinsClient', ['jenkinsClient.filters', 'jenkinsClient.services', 'jenkinsClient.directives']).config(
 	['$routeProvider', '$provide', '$locationProvider', function ($routeProvider, $provide, $locationProvider) {
-		$routeProvider.when('/plugin/ng/index.html', {templateUrl: '/plugin/ng/views/partial1.html', controller: MyCtrl1});
-		$routeProvider.otherwise({redirectTo: '/plugin/ng/index.html'});
+		$routeProvider.when('/index.html', {templateUrl: '/views/partial1.html', controller: MyCtrl1});
 		$locationProvider.html5Mode(true);
 	}]
 );	
@@ -32,43 +31,31 @@ serviceModule.factory('View', function($resource){
 });
 'use strict';
 
-/* Controllers */
-
-
-function MenuCtrl($scope) {
-	$scope.enabled = false;
-
-	$scope.links = [
+function ActionsCtrl($scope) {
+	$scope.actions = [
 		{
-			src: 'test.html',
-			label: 'New job',
-			iconClass: ''
+			title: 'New job',
+			tooltipText: 'Create a new Job',
+			iconClass: 'icon-plus-sign'
 		},
 		{
-			src: 'test.html',
-			label: 'People',
-			iconClass: ''
+			title: 'People',
+			tooltipText: 'See people on the project',
+			iconClass: 'icon-user'
+		},
+		{
+			title: 'Build current job',
+			tooltipText: 'Build current job',
+			iconClass: 'icon-time'
 		}
 	];
-	
-	$scope.launchTask = function (val) {
-
-	};
 }
+'use strict';
 
 function BuildQueueCtrl($scope) {
 	
 }
-
-function ActionsCtrl($scope) {
-	$scope.actions = [
-		{
-			title: '',
-			tooltipText: '',
-			iconClass: ''
-		}
-	];
-}
+'use strict';
 
 function MyCtrl1($scope, View) {
 
@@ -76,10 +63,56 @@ function MyCtrl1($scope, View) {
 }
 'use strict';
 
+function MenuCtrl($scope, $location) {
+
+	$scope.enabled = false;
+
+	$scope.links = [
+		{
+			src: '/status',
+			label: 'Status',
+			iconClass: ''
+		},
+		{
+			src: '/changes',
+			label: 'Changes',
+			iconClass: ''
+		},
+		{
+			src: '/violations',
+			label: 'Violations',
+			iconClass: ''
+		},
+		{
+			src: '/coverage',
+			label: 'Coverage',
+			iconClass: ''
+		}
+	];
+
+	$scope.$watch(function () { return $location.path(); }, function(newValue, oldValue) {
+		if (newValue.indexOf('job') !== -1) {
+			$scope.enabled = true;
+		} else {
+			$scope.enabled = false;
+		}
+	});
+	
+	$scope.launchTask = function (val) {
+		if ($scope.enabled === false) {
+			return;
+		}
+		$location.path(val.src);
+
+	};
+}
+
+'use strict';
+
 /* Filters */
 
 angular.module('jenkinsClient.filters', []).filter('interpolate', 
-	[]
+	[function(){}]
 );
 'use strict';
 

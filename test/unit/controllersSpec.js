@@ -15,6 +15,10 @@ describe('Controllers', function () {
 		it('should be disabled when the user is on the home page', function () {
 
 		});
+
+		it('should be enabled when the user is job view page', function () {
+
+		});		
 		
 		it('should have menu links', function () {
 			expect(angular.isDefined(scope.links)).toBeTruthy()

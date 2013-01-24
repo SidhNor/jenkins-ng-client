@@ -3,5 +3,5 @@
 /* Filters */
 
 angular.module('jenkinsClient.filters', []).filter('interpolate', 
-	[]
+	[function(){}]
 );

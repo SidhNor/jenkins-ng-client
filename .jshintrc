@@ -27,7 +27,5 @@
     /*Global vars*/
     "browser": true,
     "devel": true,
-    "jquery": true,
-    "angular":true
-
+    "jquery": true
 }
