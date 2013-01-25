@@ -5,6 +5,10 @@
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
 
+/*global MyCtrl1: true, MyCtrl2: true*/
+
+'use strict';
+
 var jenkinsClient = angular.module('jenkinsClient', ['ngResource']);
 
 jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', function ($routeProvider, $provide, $locationProvider) {
@@ -13,17 +17,22 @@ jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', functio
 	}]
 );	
 
+
+'use strict';
+
 /* Services */
 
 jenkinsClient.value('version', '0.0.2');
 
-jenkinsClient.factory('View', function($resource){
+jenkinsClient.factory('View', ['$resource', function ($resource){
 	return $resource('/api/json', {tree: 'views[name,jobs[name]]'}, {
 		query: {method: 'GET', params: {}, isArray: false}
 	});
-});
+}
+]);
+'use strict';
 
-jenkinsClient.controller('ActionsCtrl', function ActionsCtrl($scope) {
+jenkinsClient.controller('ActionsCtrl', ['$scope', function ActionsCtrl($scope) {
 	$scope.actions = [
 		{
 			title: 'New job',
@@ -41,16 +50,24 @@ jenkinsClient.controller('ActionsCtrl', function ActionsCtrl($scope) {
 			iconClass: 'icon-time'
 		}
 	];
-});
-jenkinsClient.controller('BuildQueueCtrl', function BuildQueueCtrl($scope) {
+}
+]);
+'use strict';
+
+jenkinsClient.controller('BuildQueueCtrl', ['$scope', function BuildQueueCtrl($scope) {
 	
-});
-jenkinsClient.controller('MyCtrl1', function MyCtrl1($scope, View) {
+}
+]);
+'use strict';
+
+jenkinsClient.controller('MyCtrl1', ['$scope', 'View', function MyCtrl1($scope, View) {
 
 	$scope.views = View.query();
-});
+}
+]);
+'use strict';
 
-jenkinsClient.controller('MenuCtrl', function MenuCtrl($scope, $location) {
+jenkinsClient.controller('MenuCtrl', ['$scope', '$location', function MenuCtrl($scope, $location) {
 
 	$scope.enabled = false;
 
@@ -92,12 +109,18 @@ jenkinsClient.controller('MenuCtrl', function MenuCtrl($scope, $location) {
 		$location.path(val.src);
 
 	};
-});
+}
+]);
+
+'use strict';
+
 /* Filters */
 
 jenkinsClient.filter('interpolate', function () {
 
 });
+'use strict';
+
 /* Directives */
 
 jenkinsClient.directive('appVersion', ['version', function (version) {
