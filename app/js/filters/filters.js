@@ -2,6 +2,6 @@
 
 /* Filters */
 
-angular.module('jenkinsClient.filters', []).filter('interpolate', 
-	[function(){}]
-);
+jenkinsClient.filter('interpolate', function () {
+
+});

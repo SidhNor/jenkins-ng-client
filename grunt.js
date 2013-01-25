@@ -48,7 +48,8 @@ module.exports = function (grunt) {
 				globalstrict:true
 			},
 			globals: {
-				angular: true
+				angular: true,
+				jenkinsClient: true
 			}
 		},
 		compass: {

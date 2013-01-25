@@ -10,7 +10,8 @@
         "waits": true,
         "waitsFor": true,
         "runs": true,
-        "angular" : true
+        "angular" : true,
+        "jenkinsClient": true
     },
     "globalstrict": false,
     "camelcase" : true,

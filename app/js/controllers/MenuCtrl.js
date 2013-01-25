@@ -1,6 +1,6 @@
 'use strict';
 
-function MenuCtrl($scope, $location) {
+jenkinsClient.controller('MenuCtrl', ['$scope', '$location', function MenuCtrl($scope, $location) {
 
 	$scope.enabled = false;
 
@@ -27,7 +27,7 @@ function MenuCtrl($scope, $location) {
 		}
 	];
 
-	$scope.$watch(function () { return $location.path(); }, function(newValue, oldValue) {
+	$scope.$watch(function () { return $location.path(); }, function (newValue, oldValue) {
 		if (newValue.indexOf('job') !== -1) {
 			$scope.enabled = true;
 		} else {
@@ -43,3 +43,4 @@ function MenuCtrl($scope, $location) {
 
 	};
 }
+]);

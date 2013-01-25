@@ -1,6 +1,6 @@
 'use strict';
 
-function ActionsCtrl($scope) {
+jenkinsClient.controller('ActionsCtrl', ['$scope', function ActionsCtrl($scope) {
 	$scope.actions = [
 		{
 			title: 'New job',
@@ -19,3 +19,4 @@ function ActionsCtrl($scope) {
 		}
 	];
 }
+]);

@@ -2,10 +2,11 @@
 
 /* Services */
 
-var serviceModule = angular.module('jenkinsClient.services', ['ngResource']);
-serviceModule.value('version', '0.0.2');
-serviceModule.factory('View', function($resource){
+jenkinsClient.value('version', '0.0.2');
+
+jenkinsClient.factory('View', ['$resource', function ($resource){
 	return $resource('/api/json', {tree: 'views[name,jobs[name]]'}, {
 		query: {method: 'GET', params: {}, isArray: false}
 	});
-});
+}
+]);

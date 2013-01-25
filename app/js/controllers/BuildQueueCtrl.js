@@ -1,5 +1,6 @@
 'use strict';
 
-function BuildQueueCtrl($scope) {
+jenkinsClient.controller('BuildQueueCtrl', ['$scope', function BuildQueueCtrl($scope) {
 	
 }
+]);
