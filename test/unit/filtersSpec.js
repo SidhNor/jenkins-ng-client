@@ -3,6 +3,6 @@
 /* jasmine specs for filters go here */
 
 describe('filter', function () {
-	beforeEach(module('jenkinsClient.filters'));
+	beforeEach(module('jenkinsClient'));
 
 });

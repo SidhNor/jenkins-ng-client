@@ -3,7 +3,7 @@
 /* jasmine specs for services go here */
 
 describe('service', function () {
-	beforeEach(module('jenkinsClient.services'));
+	beforeEach(module('jenkinsClient'));
 
 	describe('version', function () {
 		it('should return current version', inject(function (version) {

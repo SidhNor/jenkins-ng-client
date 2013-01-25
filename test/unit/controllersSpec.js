@@ -2,14 +2,15 @@
 
 /* jasmine specs for controllers go here */
 describe('Controllers', function () {
-
+	beforeEach(module('jenkinsClient'));
+	
 	describe('MenuCtrl', function (){
 		var menuCtrl;
 		var scope;
 
-		beforeEach(inject(function ($rootScope, $controller){
+		beforeEach(inject(function ($rootScope, $controller, $location){
 			scope = $rootScope.$new();
-			menuCtrl = $controller(MenuCtrl, {$scope: scope});
+			menuCtrl = $controller('MenuCtrl', {$scope: scope});
 		}));
 		
 		it('should have menu links', function () {
