@@ -1,0 +1,3 @@
+[submodule "app/sass/bootstrap-compass"]
+	path = app/sass/bootstrap-compass
+	url = https://github.com/SidhNor/bootstrap-compass.git
