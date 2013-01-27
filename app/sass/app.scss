@@ -1,19 +1,35 @@
 @import "bootstrap-compass/modules/modules";
 @import "jenkins-ng-mixins";
 
+
+// CSS Reset
 @include reset();
+
+// Grid system and page structure
 @include scaffolding();
 @include gridSystem(responsive);
+@include gridSystem(fixed);
+@include gridSystem(input);
+@include gridSystem(table);
 @include layouts(responsive);
+@include layouts(fixed);
+// Base CSS
 @include typography(true, true, true);
 @include forms();
 @include tables();
-@include close();
+// Components: common
+@include iconography();
+@include dropdowns();
+// Components: Buttons & Alerts
 @include buttons();
 @include bootstrap-alternate-buttons();
 @include button-groups();
-@include breadcrumbs();
+@include alerts();
+
 @include tooltips();
+
+@include responsive();
+
 
 $iconSpritePath:          image-url("glyphicons-halflings.png", true);
 $iconWhiteSpritePath:     image-url("glyphicons-halflings-white.png", true);
