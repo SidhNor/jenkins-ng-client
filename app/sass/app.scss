@@ -1,7 +1,23 @@
-@import "meyer-reset";
+@import "bootstrap-compass/modules/modules";
 @import "jenkins-ng-mixins";
-@import "compass/css3/images";
-@import "compass/css3/box-shadow";
+
+@include reset();
+@include scaffolding();
+@include gridSystem(responsive);
+@include layouts(responsive);
+@include typography(true, true, true);
+@include forms();
+@include tables();
+@include close();
+@include buttons();
+@include bootstrap-alternate-buttons();
+@include button-groups();
+@include breadcrumbs();
+@include tooltips();
+
+$iconSpritePath:          image-url("glyphicons-halflings.png", true);
+$iconWhiteSpritePath:     image-url("glyphicons-halflings-white.png", true);
+
 
 body {
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;

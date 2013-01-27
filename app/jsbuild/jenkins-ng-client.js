@@ -1,6 +1,6 @@
 /**
  * Responsive Angular JS client for Jenins
- * @version v0.0.2 - 2013-01-25
+ * @version v0.0.2 - 2013-01-27
  * @link https://github.com/SidhNor/jenkins-ng-client
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -12,7 +12,10 @@
 var jenkinsClient = angular.module('jenkinsClient', ['ngResource']);
 
 jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', function ($routeProvider, $provide, $locationProvider) {
-		$routeProvider.when('/index.html', {templateUrl: '/views/partial1.html', controller: 'MyCtrl1'});
+		$routeProvider.when('/index.html', 
+		{
+			templateUrl: 'views/partial1.html', controller: 'MyCtrl1'}
+		);
 		$locationProvider.html5Mode(true);
 	}]
 );	
