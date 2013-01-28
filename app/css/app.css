@@ -3984,6 +3984,7 @@ body > header > h1 {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_footer\.scss}line{font-family:\000031}}
 footer {
   text-align: center;
+  color: gray;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\000031}}
@@ -4053,6 +4054,26 @@ footer {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\0000322}}
 .content > header:after {
   clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000317}}
+.content > header > h1 {
+  color: #595959;
+  font-size: 28px;
+  font-weight: normal;
+  float: left;
+  text-shadow: 0 1px 0 white;
+  margin-left: 20px;
+  position: absolute;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000326}}
+.content > header > .actions {
+  float: right;
+  right: 20px;
+  position: absolute;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000331}}
+.content > header > h1, .content > header > .actions {
+  margin-top: 20px;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_breadcrumb\.scss}line{font-family:\000031}}

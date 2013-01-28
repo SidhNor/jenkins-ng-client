@@ -14,7 +14,11 @@ var jenkinsClient = angular.module('jenkinsClient', ['ngResource']);
 jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', function ($routeProvider, $provide, $locationProvider) {
 		$routeProvider.when('/index.html', 
 		{
-			templateUrl: 'views/partial1.html', controller: 'MyCtrl1'}
+			templateUrl: 'views/dashboard.html', controller: 'MyCtrl1'}
+		);
+		$routeProvider.when('/', 
+		{
+			templateUrl: 'views/dashboard.html', controller: 'MyCtrl1'}
 		);
 		$locationProvider.html5Mode(true);
 	}]
@@ -70,10 +74,22 @@ jenkinsClient.controller('MyCtrl1', ['$scope', 'View', function MyCtrl1($scope, 
 ]);
 'use strict';
 
+jenkinsClient.controller('MainPageCtrl', ['$scope', '$location', function MainPageCtrl($scope, $location) {
+	$scope.title = 'Dashboard';
+
+	$scope.crumbs = [
+		{
+			name: 'Home',
+			path: '/'
+		}
+	];
+}
+]);
+'use strict';
+
 jenkinsClient.controller('MenuCtrl', ['$scope', '$location', function MenuCtrl($scope, $location) {
 
 	$scope.enabled = false;
-
 	$scope.links = [
 		{
 			src: '/status',

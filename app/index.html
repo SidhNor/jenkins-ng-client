@@ -20,10 +20,10 @@
 		</ul>
 	</aside>
 
-	<section class="content">
+	<section class="content" ng-controller="MainPageCtrl">
 		<header>
 			<h1>{{title}}</h1>
-			<div class="btn-group" ng-controller="ActionsCtrl">
+			<div class="btn-group actions" ng-controller="ActionsCtrl">
 				<a ng-repeat="action in actions" class="btn btn-large tip-bottom" data-original-title="{{action.tooltipText}}">
 					<i class="{{action.iconClass}}"></i>
 				</a>
@@ -40,7 +40,7 @@
 		</article>
 	</section>
 
-	<footer class="clearfix">&copy; 2013 Powered by <a href="http://angularjs.org/">AngularJS</a>. Brought by <a href="https://github.com/SidhNor">SidhNor</a>
+	<footer>&copy; 2013 Powered by <a href="http://angularjs.org/">AngularJS</a>. Brought by <a href="https://github.com/SidhNor">SidhNor</a>
 		<div app-version></div>
 	</footer>
 

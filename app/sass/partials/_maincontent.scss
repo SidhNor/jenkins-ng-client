@@ -14,8 +14,22 @@
       border-top-left-radius: $jenkins-ng-hero-radius;
       height: 80px;
       @include clearfix();
-      .btn-group {
-         
+      > h1 {
+         color: lighten($black, 35%);
+         font-size: $baseFontSize * 2;
+         font-weight: normal;
+         float: left;
+         text-shadow: 0 1px 0 #ffffff;
+         margin-left: 20px;
+         position: absolute;
+      }
+      > .actions {
+         float: right;
+         right: 20px;
+         position: absolute;
+      }
+      > h1, > .actions {
+         margin-top: 20px;
       }
    }
 }

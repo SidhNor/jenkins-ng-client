@@ -8,7 +8,7 @@ describe('Controllers', function () {
 		var menuCtrl;
 		var scope;
 
-		beforeEach(inject(function ($rootScope, $controller, $location){
+		beforeEach(inject(function ($rootScope, $controller){
 			scope = $rootScope.$new();
 			menuCtrl = $controller('MenuCtrl', {$scope: scope});
 		}));
@@ -77,6 +77,31 @@ describe('Controllers', function () {
 		it('should have actions with title, tooltip text, describing icon and actual action location path', function () {
 			
 		})
+
+	});
+
+	describe('MainPageCtrl', function () {
+		var pageCtrl;
+		var scope;
+		var location;
+
+		beforeEach(inject(function ($rootScope, $controller, $location){
+			scope = $rootScope.$new();
+			location = $location;
+			pageCtrl = $controller('MainPageCtrl', {$scope: scope, $location: location});
+		}));
+
+		it('should have a title corresponding to the route', function () {
+
+		});
+
+		it('should have a navigation hierarchy for breadcrumb', function () {
+
+		});
+
+		it('should redirect to specific point of breadcrumb', function () {
+
+		});
 
 	});
 

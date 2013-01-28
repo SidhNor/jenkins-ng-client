@@ -3,7 +3,6 @@
 jenkinsClient.controller('MenuCtrl', ['$scope', '$location', function MenuCtrl($scope, $location) {
 
 	$scope.enabled = false;
-
 	$scope.links = [
 		{
 			src: '/status',

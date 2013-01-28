@@ -7,7 +7,11 @@ var jenkinsClient = angular.module('jenkinsClient', ['ngResource']);
 jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', function ($routeProvider, $provide, $locationProvider) {
 		$routeProvider.when('/index.html', 
 		{
-			templateUrl: 'views/partial1.html', controller: 'MyCtrl1'}
+			templateUrl: 'views/dashboard.html', controller: 'MyCtrl1'}
+		);
+		$routeProvider.when('/', 
+		{
+			templateUrl: 'views/dashboard.html', controller: 'MyCtrl1'}
 		);
 		$locationProvider.html5Mode(true);
 	}]
