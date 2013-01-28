@@ -33,10 +33,10 @@ module.exports = function (grunt) {
 		},
 		watch: {
 			files: ['app/**/*.js', 'test/unit/**/*.js', 'test/e2e/*/**.js', 'app/index.html'],
-			tasks: 'lint build test deploy',
+			tasks: 'lint build:dev test deploy',
 			compass: {
 				files: ['app/sass/**/*.scss'],
-        		tasks: ['compass:dev']
+				tasks: ['compass:dev']
 			}
 		},
 		jshint: {
@@ -72,10 +72,6 @@ module.exports = function (grunt) {
 				outputstyle: 'compressed',
 				linecomments: false,
 				forcecompile: true,
-				require: [
-					'animate-sass',
-					'mylib'
-				],
 				debugsass: false,
 				images: 'app/img',
 				relativeassets: true
@@ -84,9 +80,20 @@ module.exports = function (grunt) {
 	});
 
 	// Default task.
-	grunt.registerTask('default', process.env.TRAVIS ? 'lint build test' : 'lint compass:dev build test deploy');
+	grunt.registerTask('default', process.env.TRAVIS ? 'lint build:dev test' : 'lint compass:dev build:dev test deploy');
 
-	grunt.registerTask('build', 'build all', function () {
+	grunt.registerTask('prod', 'lint compass:prod build:prod test');
+
+	grunt.registerTask('build:dev', 'build all', function () {
+
+		var jsBuildFiles = grunt.config('concat.build.src');
+
+		grunt.config('concat.build.src', jsBuildFiles.concat(['app/js/services/*.js', 'app/js/controllers/*.js', 'app/js/filters/*.js', 'app/js/directives/*.js']));
+
+		grunt.task.run('concat');
+	});
+
+	grunt.registerTask('build:prod', 'build all', function () {
 
 		var jsBuildFiles = grunt.config('concat.build.src');
 
