@@ -1,6 +1,6 @@
 @import "bootstrap-compass/modules/modules";
-@import "jenkins-ng-mixins";
 
+@import "_jenkins-ng-bootloader";
 
 // CSS Reset
 @include reset();
@@ -8,7 +8,6 @@
 // Grid system and page structure
 @include scaffolding();
 @include gridSystem(responsive);
-@include gridSystem(fixed);
 @include gridSystem(input);
 @include gridSystem(table);
 @include layouts(responsive);
@@ -28,106 +27,5 @@
 
 @include tooltips();
 
-@include responsive();
-
-
-$iconSpritePath:          url("../img/glyphicons-halflings.png");
-$iconWhiteSpritePath:     url("../img/glyphicons-halflings-white.png");
-
-
-body {
-	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	font-size: $jenkins-ng-font-size;
-	line-height: $jenkins-ng-line-height;
-	color: #333;
-	> header {
-		height: $jenkins-ng-header-height;
-		position: relative;
-		z-index: -9;
-		@include box-shadow;
-		background-color: #333333;
-		@include background(linear-gradient(top, #3F3F3F 0%, #222222 100%));
-		@include ng-border-side(bottom, #555555);
-
-		> h1 {
-			color: white;
-			font-size: 42px;
-			line-height: $jenkins-ng-header-height;
-			padding-left: 25px;
-			font-family: CityBlueprint, Consolas, Arial;
-		}
-	}
-}
-
-a {
-	text-decoration: none;
-	color: #08c;
-}
-
-li {
-	line-height: $jenkins-ng-line-height;
-}
-
-.menu {
-	float: left;
-	position: relative;
-	width: $jenkins-ng-aside-width;
-	z-index: 16;
-	background-color: #444444;
-	min-height: 465px;
-	padding-bottom: 25px;	
-}
-
-footer {
-	text-align: center;
-}
-
-.nav {
-	list-style: none;
-	margin: 10px 0 0;
-	padding: 0;
-	@include ng-border-side(top);
-	@include ng-border-side(bottom, #4E4E4E);
-
-	> li {
-		display: block;
-		position: relative;
-		@include ng-border-side(top, #4E4E4E);
-		@include ng-border-side(bottom);
-
-		> a {
-			padding: 10px 0 10px 15px;
-			display: block;
-			color: #DDD;
-		}
-		> a:hover, > a:active {
-			background-color: #4A4A4A
-		}
-	}
-}
-
-.content {
-	background: none repeat scroll 0 0 #eeeeee;
-	margin-left: $jenkins-ng-aside-width;
-	margin-right: 0;
-	position: relative;
-	width: auto;
-	border-top-left-radius: $jenkins-ng-hero-radius;
-	margin-top: -35px;
-	min-height: 500px;
-	padding-bottom: 25px;
-
-	> header {
-		@include background(linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%));
-		border-top-left-radius: $jenkins-ng-hero-radius;
-		height: 80px;
-	}
-}
-
-.breadcrumb {
-	background-color: #e5e5e5;
-	@include single-box-shadow(#ffffff);
-	@include ng-border-side(top, #d6d6d6);
-	@include ng-border-side(bottom, #d6d6d6);
-	padding-left: 10px;
-}
+@import "partials";
+@import "modules";

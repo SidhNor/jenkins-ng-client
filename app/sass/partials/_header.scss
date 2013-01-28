@@ -1,0 +1,20 @@
+body {
+   > header {
+      height: $jenkins-ng-header-height;
+      position: relative;
+      z-index: -9;
+      @include box-shadow;
+      background-color: #333333;
+      @include background(linear-gradient(top, #3F3F3F 0%, #222222 100%));
+      @include ng-border-side(bottom, #555555);
+
+      > h1 {
+         color: white;
+         font-size: 42px;
+         line-height: $jenkins-ng-header-height;
+         padding-left: 25px;
+         margin: 0;
+         font-family: $monoFontFamily;
+      }
+   }
+}

@@ -1,0 +1,32 @@
+.menu {
+   float: left;
+   position: relative;
+   width: $jenkins-ng-aside-width;
+   z-index: 16;
+   background-color: #444444;
+   min-height: 465px;
+   padding-bottom: 25px; 
+   > .nav {
+      list-style: none;
+      margin: 10px 0 0;
+      padding: 0;
+      @include ng-border-side(top);
+      @include ng-border-side(bottom, #4E4E4E);
+
+      > li {
+         display: block;
+         position: relative;
+         @include ng-border-side(top, #4E4E4E);
+         @include ng-border-side(bottom);
+
+         > a {
+            padding: 10px 0 10px 15px;
+            display: block;
+            color: #DDD;
+         }
+         > a:hover, > a:active {
+            background-color: #4A4A4A
+         }
+      }
+   }
+}

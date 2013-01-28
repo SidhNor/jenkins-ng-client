@@ -1,0 +1,21 @@
+.content {
+   background: none repeat scroll 0 0 #eeeeee;
+   margin-left: $jenkins-ng-aside-width;
+   margin-right: 0;
+   position: relative;
+   width: auto;
+   border-top-left-radius: $jenkins-ng-hero-radius;
+   margin-top: -35px;
+   min-height: 500px;
+   padding-bottom: 25px;
+
+   > header {
+      @include background(linear-gradient(top, #FFFFFF 0%, #EEEEEE 100%));
+      border-top-left-radius: $jenkins-ng-hero-radius;
+      height: 80px;
+      @include clearfix();
+      .btn-group {
+         
+      }
+   }
+}

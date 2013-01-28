@@ -1,0 +1,7 @@
+.breadcrumb {
+   background-color: #e5e5e5;
+   @include single-box-shadow(#ffffff);
+   @include ng-border-side(top, #d6d6d6);
+   @include ng-border-side(bottom, #d6d6d6);
+   padding-left: 10px;
+}

@@ -357,142 +357,6 @@ a:hover {
   width: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003159}}
-.row {
-  margin-left: -20px;
-  *zoom: 1;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\0000318}}
-.row:before, .row:after {
-  display: table;
-  content: "";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\0000322}}
-.row:after {
-  clear: both;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003163}}
-[class*="span"] {
-  float: left;
-  margin-left: 20px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003171}}
-.span1 {
-  width: 60px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003171}}
-.span2 {
-  width: 140px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003171}}
-.span3 {
-  width: 220px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003171}}
-.span4 {
-  width: 300px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003171}}
-.span5 {
-  width: 380px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003171}}
-.span6 {
-  width: 460px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003171}}
-.span7 {
-  width: 540px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003171}}
-.span8 {
-  width: 620px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003171}}
-.span9 {
-  width: 700px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003171}}
-.span10 {
-  width: 780px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003171}}
-.span11 {
-  width: 860px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003169}}
-.span12, .container {
-  width: 940px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003176}}
-.offset1 {
-  margin-left: 100px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003176}}
-.offset2 {
-  margin-left: 180px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003176}}
-.offset3 {
-  margin-left: 260px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003176}}
-.offset4 {
-  margin-left: 340px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003176}}
-.offset5 {
-  margin-left: 420px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003176}}
-.offset6 {
-  margin-left: 500px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003176}}
-.offset7 {
-  margin-left: 580px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003176}}
-.offset8 {
-  margin-left: 660px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003176}}
-.offset9 {
-  margin-left: 740px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003176}}
-.offset10 {
-  margin-left: 820px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003176}}
-.offset11 {
-  margin-left: 900px;
-}
-
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\00003197}}
 input.span1, textarea.span1, .uneditable-input.span1 {
   width: 50px;
@@ -4091,218 +3955,7 @@ input[type="button"].btn-block {
   border-style: solid;
 }
 
-@-ms-viewport {
-  width: device-width;
-}
-
-@media (max-width: 767px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\000039}}
-  body {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\0000316}}
-  .navbar-fixed-top,
-  .navbar-fixed-bottom,
-  .navbar-static-top {
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\0000321}}
-  .container-fluid {
-    padding: 0;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\0000329}}
-  .dl-horizontal dt {
-    float: none;
-    clear: none;
-    width: auto;
-    text-align: left;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\0000335}}
-  .dl-horizontal dd {
-    margin-left: 0;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\0000343}}
-  .container {
-    width: auto;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\0000347}}
-  .row-fluid {
-    width: 100%;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\0000352}}
-  .row,
-  .thumbnails {
-    margin-left: 0;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\0000355}}
-  .thumbnails > li {
-    float: none;
-    margin-left: 0;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\0000362}}
-  [class*="span"],
-  .uneditable-input[class*="span"],
-  .row-fluid [class*="span"] {
-    float: none;
-    display: block;
-    width: 100%;
-    margin-left: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\0000370}}
-  .span12,
-  .row-fluid .span12 {
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\0000374}}
-  .row-fluid [class*="offset"]:first-child {
-    margin-left: 0;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\0000387}}
-  .input-large,
-  .input-xlarge,
-  .input-xxlarge,
-  input[class*="span"],
-  select[class*="span"],
-  textarea[class*="span"],
-  .uneditable-input {
-    display: block;
-    width: 100%;
-    min-height: 30px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\0000394}}
-  .input-prepend input,
-  .input-append input,
-  .input-prepend input[class*="span"],
-  .input-append input[class*="span"] {
-    display: inline-block;
-    width: auto;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\0000398}}
-  .controls-row [class*="span"] + [class*="span"] {
-    margin-left: 0;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003103}}
-  .modal {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    width: auto;
-    margin: 0;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003110}}
-  .modal.fade {
-    top: -100px;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003111}}
-  .modal.fade.in {
-    top: 20px;
-  }
-}
-@media (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003124}}
-  .nav-collapse {
-    -webkit-transform: translate3d(0, 0, 0);
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003129}}
-  .page-header h1 small {
-    display: block;
-    line-height: 20px;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003136}}
-  input[type="checkbox"],
-  input[type="radio"] {
-    border: 1px solid #cccccc;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003142}}
-  .form-horizontal .control-label {
-    float: none;
-    width: auto;
-    padding-top: 0;
-    text-align: left;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003149}}
-  .form-horizontal .controls {
-    margin-left: 0;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003153}}
-  .form-horizontal .control-list {
-    padding-top: 0;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003157}}
-  .form-horizontal .form-actions {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003166}}
-  .media .pull-left,
-  .media .pull-right {
-    float: none;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003172}}
-  .media-object {
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003178}}
-  .modal {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003183}}
-  .modal-header .close {
-    padding: 10px;
-    margin: -10px;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/responsive\/_responsive-767px-max\.scss}line{font-family:\00003189}}
-  .carousel-caption {
-    position: static;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000338}}
-body {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 14px;
-  line-height: 20px;
-  color: #333;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_header\.scss}line{font-family:\000032}}
 body > header {
   height: 77px;
   position: relative;
@@ -4318,27 +3971,22 @@ body > header {
   background: linear-gradient(top, #3f3f3f 0%, #222222 100%);
   border-bottom: 1px solid #555555;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_header\.scss}line{font-family:\0000311}}
 body > header > h1 {
   color: white;
   font-size: 42px;
   line-height: 77px;
   padding-left: 25px;
-  font-family: CityBlueprint, Consolas, Arial;
+  margin: 0;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000362}}
-a {
-  text-decoration: none;
-  color: #08c;
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_footer\.scss}line{font-family:\000031}}
+footer {
+  text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000367}}
-li {
-  line-height: 20px;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\000031}}
 .menu {
   float: left;
   position: relative;
@@ -4348,39 +3996,33 @@ li {
   min-height: 465px;
   padding-bottom: 25px;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000381}}
-footer {
-  text-align: center;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000385}}
-.nav {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\000039}}
+.menu > .nav {
   list-style: none;
   margin: 10px 0 0;
   padding: 0;
   border-top: 1px solid #393939;
   border-bottom: 1px solid #4e4e4e;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000392}}
-.nav > li {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000316}}
+.menu > .nav > li {
   display: block;
   position: relative;
   border-top: 1px solid #4e4e4e;
   border-bottom: 1px solid #393939;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\0000398}}
-.nav > li > a {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000322}}
+.menu > .nav > li > a {
   padding: 10px 0 10px 15px;
   display: block;
   color: #DDD;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\00003103}}
-.nav > li > a:hover, .nav > li > a:active {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000327}}
+.menu > .nav > li > a:hover, .menu > .nav > li > a:active {
   background-color: #4a4a4a;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\000031}}
 .content {
   background: none repeat scroll 0 0 #eeeeee;
   margin-left: 220px;
@@ -4392,7 +4034,7 @@ footer {
   min-height: 500px;
   padding-bottom: 25px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000312}}
 .content > header {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
   background: -webkit-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
@@ -4401,9 +4043,19 @@ footer {
   background: linear-gradient(top, #ffffff 0%, #eeeeee 100%);
   border-top-left-radius: 8px;
   height: 80px;
+  *zoom: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\0000318}}
+.content > header:before, .content > header:after {
+  display: table;
+  content: "";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/_mixins\.scss}line{font-family:\0000322}}
+.content > header:after {
+  clear: both;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/app\.scss}line{font-family:\00003127}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_breadcrumb\.scss}line{font-family:\000031}}
 .breadcrumb {
   background-color: #e5e5e5;
   -webkit-box-shadow: 0px 1px 3px white;
