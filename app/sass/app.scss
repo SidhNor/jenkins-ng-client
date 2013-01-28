@@ -19,6 +19,7 @@
 // Components: common
 @include iconography();
 @include dropdowns();
+@include breadcrumbs();
 // Components: Buttons & Alerts
 @include buttons();
 @include bootstrap-alternate-buttons();

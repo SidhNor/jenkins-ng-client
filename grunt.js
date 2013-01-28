@@ -147,6 +147,10 @@ module.exports = function (grunt) {
 			grunt.file.copy(path, grunt.config('deploydir') + path.replace(/app/ ,''));
 		});
 
+		grunt.file.expand('app/img/*.*').forEach(function(path) {
+			grunt.file.copy(path, grunt.config('deploydir') + path.replace(/app/ ,''));
+		});
+
 		grunt.file.expand('app/lib/*/*.*').forEach(function(path) {
 			grunt.file.copy(path, grunt.config('deploydir') + path.replace(/app/ ,''));
 		});

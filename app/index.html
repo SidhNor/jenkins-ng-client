@@ -4,8 +4,8 @@
 	<meta charset="utf-8">
 	<title>Jenkins Angular Client</title>
 	<link rel="stylesheet" href="css/app.css"/>
-	<base href="/jenkins/index.html">
-	<!--<base href="/plugin/ng/index.html">-->
+	<!--<base href="/jenkins/index.html">-->
+	<base href="/plugin/ng/index.html">
 </head>
 <body>
 	<header>
@@ -15,28 +15,35 @@
 		<ul class="nav">
 			<li ng-repeat="link in links">
 				<i ng-class="link.iconClass"></i>
-				<a ng-click="launchTask(link)">{{link.label}}</a>
+				<a ng-click="launchTask(link)" class="ng-cloak">{{link.label}}</a>
 			</li>
 		</ul>
 	</aside>
 
 	<section class="content" ng-controller="MainPageCtrl">
 		<header>
-			<h1>{{title}}</h1>
+			<h1 class="ng-cloak">{{title}}</h1>
 			<div class="btn-group actions" ng-controller="ActionsCtrl">
-				<a ng-repeat="action in actions" class="btn btn-large tip-bottom" data-original-title="{{action.tooltipText}}">
+				<a ng-repeat="action in actions" class="btn btn-large tip-bottom" data-original-title="{{action.tooltipText}}" class="ng-cloak">
 					<i class="{{action.iconClass}}"></i>
 				</a>
 			</div>
 		</header>
-		<div class="breadcrumb">
-			<ul>
-		  		<li ng-repeat="crumb in crumbs">
-					<a href="#">{{crumb.name}}</a>
+		<div>
+			<ul class="breadcrumb">
+		  		<li ng-repeat="crumb in crumbs | limitTo:crumbs.length-1">
+					<a href="{{crumb.path}}" class="ng-cloak">
+						<i class="icon-home" ng-hide="$index != 0"></i>
+						{{crumb.name}}
+					</a>
+					<span class="divider">/</span>
+				</li>
+		  		<li ng-repeat="crumb in crumbs | limitTo: -1" class="ng-cloak">
+					{{crumb.name}}
 				</li>
 			</ul>
 		</div>
-		<artile ng-view>
+		<article ng-view>
 		</article>
 	</section>
 

@@ -14,11 +14,19 @@ var jenkinsClient = angular.module('jenkinsClient', ['ngResource']);
 jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', function ($routeProvider, $provide, $locationProvider) {
 		$routeProvider.when('/index.html', 
 		{
-			templateUrl: 'views/dashboard.html', controller: 'MyCtrl1'}
+			templateUrl: 'views/dashboard.html', controller: 'JobViewCtrl'}
 		);
 		$routeProvider.when('/', 
 		{
-			templateUrl: 'views/dashboard.html', controller: 'MyCtrl1'}
+			templateUrl: 'views/dashboard.html', controller: 'JobViewCtrl'}
+		);
+		$routeProvider.when('/view/:jobViewName',
+		{
+			templateUrl: 'views/jobviews.html', controller: 'JobViewCtrl'}
+		);
+		$routeProvider.when('/job/:jobName',
+		{
+			templateUrl: 'views/job.html', controller: 'JobCtrl'}
 		);
 		$locationProvider.html5Mode(true);
 	}]
@@ -67,20 +75,46 @@ jenkinsClient.controller('BuildQueueCtrl', ['$scope', function BuildQueueCtrl($s
 ]);
 'use strict';
 
-jenkinsClient.controller('MyCtrl1', ['$scope', 'View', function MyCtrl1($scope, View) {
+jenkinsClient.controller('JobCtrl', ['$scope', '$routeParams', function JobCtrl($scope, $routeParams) {
 
-	$scope.views = View.query();
 }
 ]);
 'use strict';
 
-jenkinsClient.controller('MainPageCtrl', ['$scope', '$location', function MainPageCtrl($scope, $location) {
-	$scope.title = 'Dashboard';
+jenkinsClient.controller('JobViewCtrl', ['$scope', '$routeParams', 'View', function JobViewCtrl($scope, $routeParams, View) {
 
+	$scope.views = View.query(function() {
+		if ($routeParams.hasOwnProperty('jobViewName')) {
+			for (var i in $scope.views.views) {
+				if ($scope.views.views[i].name === $routeParams.jobViewName) {
+					$scope.currentView = $scope.views.views[i];
+					break;
+				}
+			}
+		}
+	});
+}
+]);
+'use strict';
+
+jenkinsClient.controller('MainPageCtrl', ['$scope', '$route', function MainPageCtrl($scope, $route) {
+	$scope.title = 'Dashboard';
+	
+	$scope.$on('$locationChangeSuccess', function(scope) {
+		if ($route.current) {
+			if ($route.current.params.hasOwnProperty('jobViewName')) {
+				$scope.title = 'View: ' + $route.current.params.jobViewName;
+			}
+		}
+	});
 	$scope.crumbs = [
 		{
 			name: 'Home',
-			path: '/'
+			path: 'view/All'
+		},
+		{
+			name: 'View',
+			path: 'view/MyView'
 		}
 	];
 }

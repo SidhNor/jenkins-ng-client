@@ -84,14 +84,37 @@ describe('Controllers', function () {
 		var pageCtrl;
 		var scope;
 		var location;
+		var $httpBackend;
 
-		beforeEach(inject(function ($rootScope, $controller, $location){
+		beforeEach(inject(function ($rootScope, $controller, $injector){
 			scope = $rootScope.$new();
-			location = $location;
+			location = $injector.get('$location');
+			$httpBackend = $injector.get('$httpBackend');
 			pageCtrl = $controller('MainPageCtrl', {$scope: scope, $location: location});
 		}));
 
-		it('should have a title corresponding to the route', function () {
+		afterEach(function() {
+			$httpBackend.verifyNoOutstandingExpectation();
+			$httpBackend.verifyNoOutstandingRequest();
+		});
+
+		it('should have Dashboard title if the location is in root', function () {
+			location.path('index.html');
+			$httpBackend.when('GET', 'views/dashboard.html').respond('');
+			scope.$apply();
+			$httpBackend.flush();
+			expect(scope.title).toBe('Dashboard');
+		});
+
+		it('should have view\'s title if the location is a view', function () {
+			location.path('/view/All');
+			$httpBackend.when('GET', 'views/jobviews.html').respond('');
+			scope.$apply();
+			$httpBackend.flush();
+			expect(scope.title).toBe('View: All');
+		});
+
+		it('should have job\'s title if the location is a job', function () {
 
 		});
 
@@ -105,4 +128,42 @@ describe('Controllers', function () {
 
 	});
 
+	describe('JobViewCtrl', function () {
+		var viewCtrl;
+		var $scope;
+		var $routeParams;
+		var view;
+		var $httpBackend;
+		var $controller;
+		var fakeResponse = {views: [{name: 'All', jobs: [{name: 'TestJob'},{name: 'TestJob2'}]},{name: 'FirstView', jobs: []}]};
+		beforeEach(inject(function ($injector){
+			$scope = $injector.get('$rootScope').$new();
+			$routeParams = $injector.get('$routeParams');
+			view = $injector.get('View');
+			$httpBackend = $injector.get('$httpBackend');
+			$controller = $injector.get('$controller');
+		}));
+
+		afterEach(function() {
+			$httpBackend.verifyNoOutstandingExpectation();
+			$httpBackend.verifyNoOutstandingRequest();
+		});
+
+		it('should fetch all views if no specific view is specified', function () {
+			$httpBackend.when('GET', '/api/json?tree=views%5Bname,jobs%5Bname%5D%5D').respond(fakeResponse);
+			viewCtrl = $controller('JobViewCtrl', {$scope: $scope, $routeParams: $routeParams, View: view});
+			$httpBackend.flush();
+			expect($scope.views.views.length).toBe(2);
+		});
+
+		it('should have just currentView if a view was specified in routeParams', function () {
+			$httpBackend.when('GET', '/api/json?tree=views%5Bname,jobs%5Bname%5D%5D').respond(fakeResponse);
+			$routeParams = {jobViewName: 'FirstView'};
+			viewCtrl = $controller('JobViewCtrl', {$scope: $scope, $routeParams: $routeParams, View: view});
+			$httpBackend.flush();
+			expect(angular.isDefined($scope.currentView)).toBeTruthy();
+			expect($scope.currentView.name).toBe('FirstView');
+		});
+
+	});
 });
