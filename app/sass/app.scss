@@ -31,8 +31,8 @@
 @include responsive();
 
 
-$iconSpritePath:          image-url("glyphicons-halflings.png", true);
-$iconWhiteSpritePath:     image-url("glyphicons-halflings-white.png", true);
+$iconSpritePath:          url("../img/glyphicons-halflings.png");
+$iconWhiteSpritePath:     url("../img/glyphicons-halflings-white.png");
 
 
 body {
