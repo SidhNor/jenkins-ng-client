@@ -1,8 +1,6 @@
-/*global MyCtrl1: true, MyCtrl2: true*/
-
 'use strict';
 
-var jenkinsClient = angular.module('jenkinsClient', ['ngResource']);
+var jenkinsClient = angular.module('jenkinsClient', ['ngResource', 'ui.bootstrap', 'ui.bootstrap.tpls']);
 
 jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', function ($routeProvider, $provide, $locationProvider) {
 		$routeProvider.when('/index.html', 
@@ -21,7 +19,6 @@ jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', functio
 		{
 			templateUrl: 'views/job.html', controller: 'JobCtrl'}
 		);
-		$locationProvider.html5Mode(true);
 	}]
 );	
 

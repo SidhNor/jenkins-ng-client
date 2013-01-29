@@ -13,11 +13,11 @@ jenkinsClient.controller('MainPageCtrl', ['$scope', '$route', function MainPageC
 	$scope.crumbs = [
 		{
 			name: 'Home',
-			path: 'view/All'
+			path: '#'
 		},
 		{
 			name: 'View',
-			path: 'view/MyView'
+			path: '#view/MyView'
 		}
 	];
 }

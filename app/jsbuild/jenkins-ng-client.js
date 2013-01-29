@@ -1,15 +1,13 @@
 /**
  * Responsive Angular JS client for Jenins
- * @version v0.0.2 - 2013-01-28
+ * @version v0.0.2 - 2013-01-29
  * @link https://github.com/SidhNor/jenkins-ng-client
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
 
-/*global MyCtrl1: true, MyCtrl2: true*/
-
 'use strict';
 
-var jenkinsClient = angular.module('jenkinsClient', ['ngResource']);
+var jenkinsClient = angular.module('jenkinsClient', ['ngResource', 'ui.bootstrap', 'ui.bootstrap.tpls']);
 
 jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', function ($routeProvider, $provide, $locationProvider) {
 		$routeProvider.when('/index.html', 
@@ -28,7 +26,6 @@ jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', functio
 		{
 			templateUrl: 'views/job.html', controller: 'JobCtrl'}
 		);
-		$locationProvider.html5Mode(true);
 	}]
 );	
 
@@ -110,11 +107,11 @@ jenkinsClient.controller('MainPageCtrl', ['$scope', '$route', function MainPageC
 	$scope.crumbs = [
 		{
 			name: 'Home',
-			path: 'view/All'
+			path: '#'
 		},
 		{
 			name: 'View',
-			path: 'view/MyView'
+			path: '#view/MyView'
 		}
 	];
 }

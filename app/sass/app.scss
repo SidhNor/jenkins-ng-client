@@ -16,10 +16,12 @@
 @include typography(true, true, true);
 @include forms();
 @include tables();
+@include component-anims();
 // Components: common
 @include iconography();
 @include dropdowns();
 @include breadcrumbs();
+@include accordions();
 // Components: Buttons & Alerts
 @include buttons();
 @include bootstrap-alternate-buttons();

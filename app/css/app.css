@@ -2102,6 +2102,34 @@ table th[class*="span"],
   background-color: #c4e3f3;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-common\/_component-animations\.scss}line{font-family:\000034}}
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-common\/_component-animations\.scss}line{font-family:\000037}}
+.fade.in {
+  opacity: 1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-common\/_component-animations\.scss}line{font-family:\0000312}}
+.collapse {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  -webkit-transition: height 0.35s ease;
+  -moz-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-common\/_component-animations\.scss}line{font-family:\0000317}}
+.collapse.in {
+  height: auto;
+}
+
 @media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-common\/_sprites\.scss}line{font-family:\0000317}}
 [class^="icon-"],
 [class*=" icon-"] {
@@ -3142,6 +3170,44 @@ table th[class*="span"],
 @media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-nav\/_breadcrumbs\.scss}line{font-family:\0000319}}
 .breadcrumb > .active {
   color: #404040;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-misc\/_accordion\.scss}line{font-family:\000036}}
+.accordion {
+  margin-bottom: 20px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-misc\/_accordion\.scss}line{font-family:\0000311}}
+.accordion-group {
+  margin-bottom: 2px;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-misc\/_accordion\.scss}line{font-family:\0000316}}
+.accordion-heading {
+  border-bottom: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-misc\/_accordion\.scss}line{font-family:\0000319}}
+.accordion-heading .accordion-toggle {
+  display: block;
+  padding: 8px 15px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-misc\/_accordion\.scss}line{font-family:\0000325}}
+.accordion-toggle {
+  cursor: pointer;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-misc\/_accordion\.scss}line{font-family:\0000330}}
+.accordion-inner {
+  padding: 9px 15px;
+  border-top: 1px solid #e5e5e5;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-button-alerts\/_buttons\.scss}line{font-family:\0000327}}

@@ -53,7 +53,8 @@ module.exports = function (grunt) {
 			},
 			globals: {
 				angular: true,
-				jenkinsClient: true
+				jenkinsClient: true,
+				document: true
 			}
 		},
 		compass: {
