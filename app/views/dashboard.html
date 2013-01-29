@@ -1,5 +1,5 @@
 <accordion close-others="true">
-	<accordion-group ng-repeat="view in views.views" heading="{{view.name}}" is-open="$first || true">
+	<accordion-group ng-repeat="view in views.views" heading="{{view.name}}" is-open="$first">
 		<ul>
 			<li ng-repeat="job in view.jobs">
 				{{job.name}}

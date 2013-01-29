@@ -2104,11 +2104,11 @@ table th[class*="span"],
 
 @media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-common\/_component-animations\.scss}line{font-family:\000034}}
 .fade {
-  opacity: 0;
   -webkit-transition: opacity 0.15s linear;
   -moz-transition: opacity 0.15s linear;
   -o-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
+  opacity: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-common\/_component-animations\.scss}line{font-family:\000037}}
 .fade.in {
@@ -2117,13 +2117,13 @@ table th[class*="span"],
 
 @media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-common\/_component-animations\.scss}line{font-family:\0000312}}
 .collapse {
-  position: relative;
-  overflow: hidden;
-  height: 0;
   -webkit-transition: height 0.35s ease;
   -moz-transition: height 0.35s ease;
   -o-transition: height 0.35s ease;
   transition: height 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  height: 0;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/I\:\/Projects\/jenkins-ng-client\/app\/sass\/bootstrap-compass\/modules\/components-common\/_component-animations\.scss}line{font-family:\0000317}}
 .collapse.in {
