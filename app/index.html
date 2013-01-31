@@ -24,7 +24,7 @@
 		<header>
 			<h1 class="ng-cloak">{{title}}</h1>
 			<div class="btn-group actions" ng-controller="ActionsCtrl">
-				<a ng-repeat="action in actions" class="btn btn-large tip-bottom" data-original-title="{{action.tooltipText}}" class="ng-cloak">
+				<a ng-repeat="action in actions" class="btn btn-large tip-bottom" tooltip="{{action.tooltipText}}" class="ng-cloak">
 					<i class="{{action.iconClass}}"></i>
 				</a>
 			</div>

@@ -21,4 +21,3 @@ jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', functio
 		);
 	}]
 );	
-

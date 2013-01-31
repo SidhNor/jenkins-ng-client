@@ -5,4 +5,7 @@
    @include ng-border-side(bottom, #d6d6d6);
    @include border-radius(0);
    padding-left: 10px;
+   a:hover {
+      text-decoration: none;
+   }
 }
