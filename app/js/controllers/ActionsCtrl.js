@@ -9,8 +9,13 @@ jenkinsClient.controller('ActionsCtrl', ['$scope', function ActionsCtrl($scope) 
 		},
 		{
 			title: 'People',
-			tooltipText: 'See people on the project',
+			tooltipText: 'See people',
 			iconClass: 'icon-user'
+		},
+		{
+			title: 'Build History',
+			tooltipText: 'See build history',
+			iconClass: 'icon-list-alt'
 		},
 		{
 			title: 'Build current job',

@@ -7,22 +7,22 @@ jenkinsClient.controller('MenuCtrl', ['$scope', '$location', function MenuCtrl($
 		{
 			src: '/status',
 			label: 'Status',
-			iconClass: ''
+			iconClass: 'icon-search icon-white'
 		},
 		{
 			src: '/changes',
 			label: 'Changes',
-			iconClass: ''
+			iconClass: 'icon-book icon-white'
 		},
 		{
 			src: '/violations',
 			label: 'Violations',
-			iconClass: ''
+			iconClass: 'icon-warning-sign icon-white'
 		},
 		{
 			src: '/coverage',
 			label: 'Coverage',
-			iconClass: ''
+			iconClass: 'icon-briefcase icon-white'
 		}
 	];
 

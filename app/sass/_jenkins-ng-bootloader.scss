@@ -29,6 +29,14 @@ $purple:                #7a43b6;
 $bodyBackground:        $white;
 $textColor:             $grayDark;
 
+// Responsive breakpoints
+// -------------------------
+$brkPtUpToHandset:      "only screen and (max-width: 480px)";
+$brkPtHandsetToTablet:  "only screen and (min-width: 481px) and (max-width: 767px)";
+$brkPtUpToTablet:       "only screen and (max-width: 767px)";
+$brkPtUpToTabletLand:   "only screen and (max-width: 979px)";
+$brkPtTabletLand:       "only screen and (min-width: 768px) and (max-width: 979px)";
+
 // Typography
 
 $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -124,6 +132,7 @@ $dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive;
 $jenkins-ng-font-size : 14px;
 $jenkins-ng-line-height: 20px;
 $jenkins-ng-aside-width: 220px;
+$jenkins-ng-aside-width-small: 43px;
 $jenkins-ng-hero-radius: 8px;
 $jenkins-ng-header-height: 77px;
 
@@ -138,13 +147,13 @@ $default-box-shadow-blur : 3px;
 /*Default values*/
 
 @mixin ng-border-side(
-	$side,
-	$color    : $jenkins-ng-default-border-color,
-	$thickness: $jenkins-ng-default-border-thickness,
-	$style    : $jenkins-ng-default-border-style
+   $side,
+   $color    : $jenkins-ng-default-border-color,
+   $thickness: $jenkins-ng-default-border-thickness,
+   $style    : $jenkins-ng-default-border-style
 ){
-	@if not ($side == top or $side == left or $side == right or $side == bottom) {
-		@warn "$side expected to be one of the top/left/bottom/right values";
-	}
-	border-#{$side} : $thickness $style $color;
+   @if not ($side == top or $side == left or $side == right or $side == bottom) {
+      @warn "$side expected to be one of the top/left/bottom/right values";
+   }
+   border-#{$side} : $thickness $style $color;
 }

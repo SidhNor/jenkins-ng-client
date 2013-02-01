@@ -2,6 +2,9 @@
    float: left;
    position: relative;
    width: $jenkins-ng-aside-width;
+   @media #{$brkPtUpToTablet} {
+      width: $jenkins-ng-aside-width-small;
+   }
    z-index: 16;
    background-color: #444444;
    min-height: 465px;
@@ -23,9 +26,22 @@
             padding: 10px 0 10px 15px;
             display: block;
             color: #DDD;
+            > i {
+               @include opacity(0.5);
+               vertical-align: top;
+               margin-top: 2px;
+               margin-right: 10px;
+            }
          }
          > a:hover, > a:active {
-            background-color: #4A4A4A
+            background-color: #4A4A4A;
+            text-decoration: none;
+         }
+         span {
+            @media #{$brkPtUpToTablet} {
+              display: none;
+            }
+
          }
       }
    }

@@ -1,6 +1,6 @@
 /**
  * Responsive Angular JS client for Jenins
- * @version v0.0.2 - 2013-01-30
+ * @version v0.0.2 - 2013-02-01
  * @link https://github.com/SidhNor/jenkins-ng-client
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -29,7 +29,6 @@ jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', functio
 	}]
 );	
 
-
 'use strict';
 
 /* Services */
@@ -53,8 +52,13 @@ jenkinsClient.controller('ActionsCtrl', ['$scope', function ActionsCtrl($scope) 
 		},
 		{
 			title: 'People',
-			tooltipText: 'See people on the project',
+			tooltipText: 'See people',
 			iconClass: 'icon-user'
+		},
+		{
+			title: 'Build History',
+			tooltipText: 'See build history',
+			iconClass: 'icon-list-alt'
 		},
 		{
 			title: 'Build current job',
@@ -97,10 +101,12 @@ jenkinsClient.controller('JobViewCtrl', ['$scope', '$routeParams', 'View', funct
 jenkinsClient.controller('MainPageCtrl', ['$scope', '$route', function MainPageCtrl($scope, $route) {
 	$scope.title = 'Dashboard';
 	
-	$scope.$on('$locationChangeSuccess', function(scope) {
+	$scope.$on('$locationChangeSuccess', function () {
 		if ($route.current) {
 			if ($route.current.params.hasOwnProperty('jobViewName')) {
 				$scope.title = 'View: ' + $route.current.params.jobViewName;
+			} else if ($route.current.params.hasOwnProperty('jobName')) {
+				$scope.title = 'Job: ' + $route.current.params.jobName;
 			}
 		}
 	});
@@ -125,22 +131,22 @@ jenkinsClient.controller('MenuCtrl', ['$scope', '$location', function MenuCtrl($
 		{
 			src: '/status',
 			label: 'Status',
-			iconClass: ''
+			iconClass: 'icon-search icon-white'
 		},
 		{
 			src: '/changes',
 			label: 'Changes',
-			iconClass: ''
+			iconClass: 'icon-book icon-white'
 		},
 		{
 			src: '/violations',
 			label: 'Violations',
-			iconClass: ''
+			iconClass: 'icon-warning-sign icon-white'
 		},
 		{
 			src: '/coverage',
 			label: 'Coverage',
-			iconClass: ''
+			iconClass: 'icon-briefcase icon-white'
 		}
 	];
 
