@@ -301,7 +301,6 @@ angular.module('ui.bootstrap.carousel', ['ui.bootstrap.transition'])
     }
   };
 }]);
-
 angular.module('ui.bootstrap.collapse',['ui.bootstrap.transition'])
 
 // The collapsible directive indicates a block of html that will expand and collapse
@@ -325,29 +324,28 @@ angular.module('ui.bootstrap.collapse',['ui.bootstrap.transition'])
     link: function(scope, element, attrs) {
 
       var isCollapsed;
-
-
-      var initialHeightVal = element[0].scrollHeight;
-      var heightProperlyInitialized = false;
-
-      scope.$watch(function (){ return initialHeightVal != element[0].scrollHeight}, function (value) {
-        //The listener is called when angular bindings are being resolved
-        //When we have a change of height after binding we are setting again the correct height if the group is opened
-        if (value && !heightProperlyInitialized) {
-          heightProperlyInitialized = true;
+      var initialAnimSkip = true;
+      scope.$watch(function (){ return element[0].scrollHeight; }, function (value) {
+        //The listener is called when scollHeight changes
+        //It actually does on 2 scenarios: 
+        // 1. Parent is set to display none
+        // 2. angular bindings inside are resolved
+        //When we have a change of scrollHeight we are setting again the correct height if the group is opened
+        if (element[0].scrollHeight !== 0) {
           if (!isCollapsed) {
-            doTransition({ height : element[0].scrollHeight + 'px' });
+            fixUpHeight(scope, element, element[0].scrollHeight + 'px');
           }
         }
       });
-
+      
       scope.$watch(attrs.collapse, function(value) {
         if (value) {
           collapse();
         } else {
           expand();
         }
-      });      
+      });
+      
 
       var currentTransition;
       var doTransition = function(change) {
@@ -363,25 +361,38 @@ angular.module('ui.bootstrap.collapse',['ui.bootstrap.transition'])
       };
 
       var expand = function() {
-        doTransition({ height : element[0].scrollHeight + 'px' })
-        .then(function() {
-          // This check ensures that we don't accidentally update the height if the user has closed
-          // the group while the animation was still running
-          if ( !isCollapsed) {
+        if (initialAnimSkip) {
+          initialAnimSkip = false;
+          if ( !isCollapsed ) {
             fixUpHeight(scope, element, 'auto');
           }
-        });
+        } else {
+          doTransition({ height : element[0].scrollHeight + 'px' })
+          .then(function() {
+            // This check ensures that we don't accidentally update the height if the user has closed
+            // the group while the animation was still running
+            if ( !isCollapsed ) {
+              fixUpHeight(scope, element, 'auto');
+            }
+          });
+        }
         isCollapsed = false;
       };
       
       var collapse = function() {
         isCollapsed = true;
-        fixUpHeight(scope, element, element[0].scrollHeight + 'px');
-        doTransition({'height':'0'});     
+        if (initialAnimSkip) {
+          initialAnimSkip = false;
+          fixUpHeight(scope, element, 0);
+        } else {
+          fixUpHeight(scope, element, element[0].scrollHeight + 'px');
+          doTransition({'height':'0'});
+        }
       };
     }
   };
 }]);
+
 
 // The `$dialogProvider` can be used to configure global defaults for your
 // `$dialog` service.
