@@ -6,6 +6,9 @@
 	<link rel="stylesheet" href="css/app.css"/>
 	<base href="/jenkins/">
 	<!--<base href="/plugin/ng/index.html">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="cleartype" content="on">
 </head>
 <body>
 	<header>
@@ -14,8 +17,10 @@
 	<aside ng-controller="MenuCtrl" class="menu" ng-class="{disabled: !enabled}">
 		<ul class="nav">
 			<li ng-repeat="link in links">
-				<i ng-class="link.iconClass"></i>
-				<a ng-click="launchTask(link)" class="ng-cloak">{{link.label}}</a>
+				<a ng-click="launchTask(link)" class="ng-cloak">
+					<i ng-class="link.iconClass"></i>
+					<span>{{link.label}}</span>
+				</a>
 			</li>
 		</ul>
 	</aside>
