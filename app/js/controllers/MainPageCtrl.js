@@ -1,6 +1,6 @@
 'use strict';
 
-jenkinsClient.controller('MainPageCtrl', ['$scope', '$route', function MainPageCtrl($scope, $route) {
+jenkinsClient.controller('MainPageCtrl', ['$scope', '$route', '$dialog', function MainPageCtrl($scope, $route, $dialog) {
 	$scope.title = 'Dashboard';
 	
 	$scope.$on('$locationChangeSuccess', function () {
@@ -22,5 +22,32 @@ jenkinsClient.controller('MainPageCtrl', ['$scope', '$route', function MainPageC
 			path: '#view/MyView'
 		}
 	];
+
+	$scope.loginFormShown = true;
+
+	$scope.opts = {
+		backdrop: true,
+		keyboard: true,
+		modalFade: true,
+		backdropFade: true,
+		backdropClick: true,
+		templateUrl:  'views/login.html', 
+		controller: 'LoginCtrl'
+	};
+
+	$scope.$on(jenkinsClient.eventNames.AUTH_LOGIN_REQUIRED, function() {
+		var d = $dialog.dialog($scope.opts);
+		d.open().then(function(result){
+			if(result)
+			{
+				
+			}
+		});
+	});
+
+	$scope.$on(jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED, function() {
+		$scope.loginFormShown = false;
+	});
+
 }
 ]);

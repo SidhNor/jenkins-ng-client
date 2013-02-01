@@ -29,6 +29,9 @@ jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', functio
 	}]
 );	
 
+jenkinsClient.eventNames = {};
+jenkinsClient.eventNames.AUTH_LOGIN_REQUIRED = 'event:auth-loginRequired';
+jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED = 'event:auth-loginConfirmed';
 'use strict';
 
 /* Services */
@@ -36,7 +39,7 @@ jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', functio
 jenkinsClient.value('version', '0.0.2');
 
 jenkinsClient.factory('View', ['$resource', function ($resource){
-	return $resource('/api/json', {tree: 'views[name,jobs[name]]'}, {
+	return $resource('/api/json', {tree: 'views[name,jobs[name,color,healthReport[description,score]]]'}, {
 		query: {method: 'GET', params: {}, isArray: false}
 	});
 }
@@ -82,7 +85,7 @@ jenkinsClient.controller('JobCtrl', ['$scope', '$routeParams', function JobCtrl(
 ]);
 'use strict';
 
-jenkinsClient.controller('JobViewCtrl', ['$scope', '$routeParams', 'View', function JobViewCtrl($scope, $routeParams, View) {
+jenkinsClient.controller('JobViewCtrl', ['$scope', '$rootScope','$routeParams', 'View', function JobViewCtrl($scope, $rootScope, $routeParams, View) {
 
 	$scope.views = View.query(function() {
 		if ($routeParams.hasOwnProperty('jobViewName')) {
@@ -93,12 +96,38 @@ jenkinsClient.controller('JobViewCtrl', ['$scope', '$routeParams', 'View', funct
 				}
 			}
 		}
+		if ($scope.views.views.length === 0) {
+			$rootScope.$broadcast(jenkinsClient.eventNames.AUTH_LOGIN_REQUIRED);
+		}
 	});
 }
 ]);
 'use strict';
+/*global $:true*/
 
-jenkinsClient.controller('MainPageCtrl', ['$scope', '$route', function MainPageCtrl($scope, $route) {
+jenkinsClient.controller('LoginCtrl', ['$scope', 'dialog', '$http', '$rootScope', function LoginCtrl($scope, dialog, $http, $rootScope) {
+	$scope.user = {};
+	$scope.isLoggingIn = false;
+
+	$scope.submit = function(user) {
+		$scope.isLoggingIn = true;
+		$http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
+		$http.post('/j_acegi_security_check', user, 
+			{
+				transformRequest: function(data){
+					return $.param(data);
+				}
+			})
+		.success(function(responseData){
+			$rootScope.$broadcast(jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED);
+			dialog.close();
+		});
+	};
+}
+]);
+'use strict';
+
+jenkinsClient.controller('MainPageCtrl', ['$scope', '$route', '$dialog', function MainPageCtrl($scope, $route, $dialog) {
 	$scope.title = 'Dashboard';
 	
 	$scope.$on('$locationChangeSuccess', function () {
@@ -120,6 +149,33 @@ jenkinsClient.controller('MainPageCtrl', ['$scope', '$route', function MainPageC
 			path: '#view/MyView'
 		}
 	];
+
+	$scope.loginFormShown = true;
+
+	$scope.opts = {
+		backdrop: true,
+		keyboard: true,
+		modalFade: true,
+		backdropFade: true,
+		backdropClick: true,
+		templateUrl:  'views/login.html', 
+		controller: 'LoginCtrl'
+	};
+
+	$scope.$on(jenkinsClient.eventNames.AUTH_LOGIN_REQUIRED, function() {
+		var d = $dialog.dialog($scope.opts);
+		d.open().then(function(result){
+			if(result)
+			{
+				
+			}
+		});
+	});
+
+	$scope.$on(jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED, function() {
+		$scope.loginFormShown = false;
+	});
+
 }
 ]);
 'use strict';

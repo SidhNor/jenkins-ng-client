@@ -1,9 +1,21 @@
 <accordion close-others="true">
 	<accordion-group ng-repeat="view in views.views" heading="{{view.name}}" is-open="$first">
-		<ul>
-			<li ng-repeat="job in view.jobs">
-				{{job.name}}
-			</li>
-		</ul>
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Health</th>
+					<th>Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="job in view.jobs">
+					<td>{{job.name}}</td>	
+					<td>{{job.color}}</td>
+					<td>{{job.healthReport[0].score}}</td>
+				</tr>
+			</tbody>
+		</table>
 	</accordion-group>
 </accordion>
+

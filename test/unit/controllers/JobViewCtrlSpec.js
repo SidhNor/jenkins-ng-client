@@ -22,14 +22,14 @@ describe('JobViewCtrl', function () {
 	});
 
 	it('should fetch all views if no specific view is specified', function () {
-		$httpBackend.when('GET', '/api/json?tree=views%5Bname,jobs%5Bname%5D%5D').respond(fakeResponse);
+		$httpBackend.when('GET', '/api/json?tree=views%5Bname,jobs%5Bname,color,healthReport%5Bdescription,score%5D%5D%5D').respond(fakeResponse);
 		viewCtrl = $controller('JobViewCtrl', {$scope: $scope, $routeParams: $routeParams, View: view});
 		$httpBackend.flush();
 		expect($scope.views.views.length).toBe(2);
 	});
 
 	it('should have just currentView if a view was specified in routeParams', function () {
-		$httpBackend.when('GET', '/api/json?tree=views%5Bname,jobs%5Bname%5D%5D').respond(fakeResponse);
+		$httpBackend.when('GET', '/api/json?tree=views%5Bname,jobs%5Bname,color,healthReport%5Bdescription,score%5D%5D%5D').respond(fakeResponse);
 		$routeParams = {jobViewName: 'FirstView'};
 		viewCtrl = $controller('JobViewCtrl', {$scope: $scope, $routeParams: $routeParams, View: view});
 		$httpBackend.flush();
