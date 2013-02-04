@@ -1,0 +1,12 @@
+.loader {
+	width: 26%;
+	height: 30%;
+	top: 35%;
+	left: 37%;
+	position: absolute;
+	z-index: 1;
+	@include border-radius(5%);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('../img/loading_indicator.gif');
+}

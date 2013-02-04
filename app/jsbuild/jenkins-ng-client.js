@@ -1,6 +1,6 @@
 /**
  * Responsive Angular JS client for Jenins
- * @version v0.0.2 - 2013-02-01
+ * @version v0.0.2 - 2013-02-04
  * @link https://github.com/SidhNor/jenkins-ng-client
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -32,6 +32,7 @@ jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', functio
 jenkinsClient.eventNames = {};
 jenkinsClient.eventNames.AUTH_LOGIN_REQUIRED = 'event:auth-loginRequired';
 jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED = 'event:auth-loginConfirmed';
+jenkinsClient.eventNames.AUTH_LOGIN_REJECTED = 'event:auth-loginRejected';
 'use strict';
 
 /* Services */
@@ -119,11 +120,14 @@ jenkinsClient.controller('LoginCtrl', ['$scope', 'dialog', '$http', function Log
 				}
 			})
 		.success(function(responseData){
+			$scope.isLoggingIn = false;
 			$scope.$emit(jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED);
 			dialog.close();
 		}).error(function(responseData, status){
+			$scope.isLoggingIn = false;
 			//show validation errors
 			if (status === 401) {
+				$scope.$emit(jenkinsClient.eventNames.AUTH_LOGIN_REJECTED);
 				//Invalid login information
 			} else {
 				//some other error

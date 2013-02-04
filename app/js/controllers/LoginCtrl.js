@@ -15,11 +15,14 @@ jenkinsClient.controller('LoginCtrl', ['$scope', 'dialog', '$http', function Log
 				}
 			})
 		.success(function(responseData){
+			$scope.isLoggingIn = false;
 			$scope.$emit(jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED);
 			dialog.close();
 		}).error(function(responseData, status){
+			$scope.isLoggingIn = false;
 			//show validation errors
 			if (status === 401) {
+				$scope.$emit(jenkinsClient.eventNames.AUTH_LOGIN_REJECTED);
 				//Invalid login information
 			} else {
 				//some other error

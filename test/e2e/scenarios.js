@@ -38,5 +38,10 @@ describe('my app', function() {
 
 		});		
 
-	})
+	});
+
+	describe('Login View', function (){
+		
+	});
+
 });

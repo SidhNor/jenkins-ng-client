@@ -25,3 +25,4 @@ jenkinsClient.config(['$routeProvider', '$provide', '$locationProvider', functio
 jenkinsClient.eventNames = {};
 jenkinsClient.eventNames.AUTH_LOGIN_REQUIRED = 'event:auth-loginRequired';
 jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED = 'event:auth-loginConfirmed';
+jenkinsClient.eventNames.AUTH_LOGIN_REJECTED = 'event:auth-loginRejected';

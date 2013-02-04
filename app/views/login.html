@@ -1,14 +1,15 @@
+<div class="loader" ng-show="isLoggingIn"></div>
 <div class="modal-body">
-    <form>
+    <form name="loginForm">
     <fieldset>
       <legend>Login</legend>
       <label>Username</label>
-      <input type="text" placeholder="Username" ng-model="user.j_username">
+      <input type="text" placeholder="Username" ng-model="user.j_username" required>
         <label>Password</label>
-      <input type="password" placeholder="Password" ng-model="user.j_password">
+      <input type="password" placeholder="Password" ng-model="user.j_password" required>
     </fieldset>
   </form>
 </div>
 <div class="modal-footer">
-  <button ng-click="submit(user)" class="btn">Log in</button>
+  <button ng-click="submit(user)" class="btn" ng-disabled="loginForm.$invalid || isLoggingIn">Log in</button>
 </div>
