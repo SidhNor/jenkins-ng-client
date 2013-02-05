@@ -10,3 +10,12 @@
 	background-position: center;
 	background-image: url('../img/loading_indicator.gif');
 }
+
+@media #{$brkPtUpToTablet} {
+	.modal {
+		width: 90%;
+		max-width: 560px;
+		right: 5%;
+		left: auto;
+	}
+}
