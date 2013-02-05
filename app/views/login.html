@@ -3,10 +3,11 @@
     <form name="loginForm">
     <fieldset>
       <legend>Login</legend>
-      <label>Username</label>
-      <input type="text" placeholder="Username" ng-model="user.j_username" required>
-        <label>Password</label>
-      <input type="password" placeholder="Password" ng-model="user.j_password" required>
+      <label for="j_ng_username">Username</label>
+      <input type="text" placeholder="Username" ng-model="user.j_username" name="j_ng_username" required>
+      <label for="j_ng_password">Password</label>
+      <input type="password" placeholder="Password" ng-model="user.j_password" name="j_ng_password" required>
+      <alert ng-repeat="alert in alerts" type="alert.type" close="dismissAlert($index)">{{alert.msg}}</alert>
     </fieldset>
   </form>
 </div>

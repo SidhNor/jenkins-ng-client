@@ -19,5 +19,13 @@ body {
             line-height: 40px;
          }
       }
+      > .profile-nav {
+         position: absolute;
+         top: 7px;
+         right: 20px;
+         .btn-group > .btn {
+            font-size: 10px;
+         }
+      }
    }
 }

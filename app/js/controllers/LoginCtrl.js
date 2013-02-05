@@ -1,9 +1,10 @@
 'use strict';
 /*global $:true*/
 
-jenkinsClient.controller('LoginCtrl', ['$scope', 'dialog', '$http', function LoginCtrl($scope, dialog, $http) {
+jenkinsClient.controller('LoginCtrl', ['$scope', 'dialog', '$http', '$rootScope', function LoginCtrl($scope, dialog, $http, $rootScope) {
 	$scope.user = {};
 	$scope.isLoggingIn = false;
+	$scope.alerts = [];
 
 	$scope.submit = function(user) {
 		$scope.isLoggingIn = true;
@@ -16,19 +17,23 @@ jenkinsClient.controller('LoginCtrl', ['$scope', 'dialog', '$http', function Log
 			})
 		.success(function(responseData){
 			$scope.isLoggingIn = false;
-			$scope.$emit(jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED);
-			dialog.close();
+			$rootScope.$broadcast(jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED);
+			dialog.close(user);
 		}).error(function(responseData, status){
 			$scope.isLoggingIn = false;
 			//show validation errors
 			if (status === 401) {
-				$scope.$emit(jenkinsClient.eventNames.AUTH_LOGIN_REJECTED);
-				//Invalid login information
+				$rootScope.$broadcast(jenkinsClient.eventNames.AUTH_LOGIN_REJECTED);
+				$scope.alerts.push({type: 'error', msg: 'Invalid login information. Please try again.'});
 			} else {
-				//some other error
+				$scope.alerts.push({type: 'error', msg: 'An error occured. Please try again later.'});
 			}
 
 		});
+	};
+
+	$scope.dismissAlert = function(index) {
+		$scope.alerts.splice(index, 1);
 	};
 }
 ]);

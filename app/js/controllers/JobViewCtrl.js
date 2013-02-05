@@ -1,6 +1,6 @@
 'use strict';
 
-jenkinsClient.controller('JobViewCtrl', ['$scope', '$rootScope','$routeParams', 'View', function JobViewCtrl($scope, $rootScope, $routeParams, View) {
+jenkinsClient.controller('JobViewCtrl', ['$scope', '$routeParams', 'View', '$rootScope', function JobViewCtrl($scope, $routeParams, View, $rootScope) {
 
 	$scope.views = View.query(function() {
 		if ($routeParams.hasOwnProperty('jobViewName')) {
@@ -15,5 +15,10 @@ jenkinsClient.controller('JobViewCtrl', ['$scope', '$rootScope','$routeParams', 
 			$rootScope.$broadcast(jenkinsClient.eventNames.AUTH_LOGIN_REQUIRED);
 		}
 	});
+
+	$scope.$on(jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED, function() {
+		$scope.views = View.query();
+	});
+
 }
 ]);
