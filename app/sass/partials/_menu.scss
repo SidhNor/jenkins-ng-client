@@ -2,13 +2,38 @@
    float: left;
    position: relative;
    width: $jenkins-ng-aside-width;
-   @media #{$brkPtUpToTablet} {
+   @media #{$brkPtHandsetToTablet} {
       width: $jenkins-ng-aside-width-small;
    }
-   z-index: 16;
-   background-color: #444444;
+   @media #{$brkPtUpToHandset} {
+      float: none;
+      width: 100%;
+      > a {
+         padding: 7px 20px 7px 15px;
+         box-shadow: 0 1px 0 #666666;
+         margin-bottom: 1px;
+         display: block;
+         text-transform: uppercase;
+         color: #eeeeee;
+         font-size: 10px;
+         @include ng-border-side(bottom);
+         &:hover {
+            text-decoration: none;
+         }
+      }
+
+      > .nav {
+         width: 100%;
+         background-color: #444;
+      }
+   }
+   z-index: 2;
+   background-color: #444;
    min-height: 465px;
    padding-bottom: 25px; 
+   > a {
+      color: $white;
+   }
    > .nav {
       list-style: none;
       margin: 10px 0 0;

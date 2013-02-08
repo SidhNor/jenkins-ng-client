@@ -4214,7 +4214,6 @@ button.close {
 body > header {
   height: 77px;
   position: relative;
-  z-index: -9;
   -webkit-box-shadow: 0px 1px 3px #333333;
   -moz-box-shadow: 0px 1px 3px #333333;
   box-shadow: 0px 1px 3px #333333;
@@ -4226,7 +4225,7 @@ body > header {
   background: linear-gradient(top, #3f3f3f 0%, #222222 100%);
   border-bottom: 1px solid #555555;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_header\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_header\.scss}line{font-family:\0000310}}
 body > header > h1 {
   color: white;
   font-size: 42px;
@@ -4236,18 +4235,18 @@ body > header > h1 {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 @media only screen and (max-width: 767px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_header\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_header\.scss}line{font-family:\0000310}}
   body > header > h1 {
     line-height: 40px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_header\.scss}line{font-family:\0000322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_header\.scss}line{font-family:\0000321}}
 body > header > .profile-nav {
   position: absolute;
   top: 7px;
   right: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_header\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_header\.scss}line{font-family:\0000325}}
 body > header > .profile-nav .btn-group > .btn {
   font-size: 10px;
 }
@@ -4263,18 +4262,49 @@ footer {
   float: left;
   position: relative;
   width: 220px;
-  z-index: 16;
-  background-color: #444444;
+  z-index: 2;
+  background-color: #444;
   min-height: 465px;
   padding-bottom: 25px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 481px) and (max-width: 767px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\000031}}
   .menu {
     width: 43px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000312}}
+@media only screen and (max-width: 480px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\000031}}
+  .menu {
+    float: none;
+    width: 100%;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000311}}
+  .menu > a {
+    padding: 7px 20px 7px 15px;
+    box-shadow: 0 1px 0 #666666;
+    margin-bottom: 1px;
+    display: block;
+    text-transform: uppercase;
+    color: #eeeeee;
+    font-size: 10px;
+    border-bottom: 1px solid #393939;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000320}}
+  .menu > a:hover {
+    text-decoration: none;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000325}}
+  .menu > .nav {
+    width: 100%;
+    background-color: #444;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000334}}
+.menu > a {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000337}}
 .menu > .nav {
   list-style: none;
   margin: 10px 0 0;
@@ -4282,20 +4312,20 @@ footer {
   border-top: 1px solid #393939;
   border-bottom: 1px solid #4e4e4e;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000319}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000344}}
 .menu > .nav > li {
   display: block;
   position: relative;
   border-top: 1px solid #4e4e4e;
   border-bottom: 1px solid #393939;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000350}}
 .menu > .nav > li > a {
   padding: 10px 0 10px 15px;
   display: block;
   color: #DDD;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000354}}
 .menu > .nav > li > a > i {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
@@ -4303,13 +4333,13 @@ footer {
   margin-top: 2px;
   margin-right: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000336}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000361}}
 .menu > .nav > li > a:hover, .menu > .nav > li > a:active {
   background-color: #4A4A4A;
   text-decoration: none;
 }
 @media only screen and (max-width: 767px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_menu\.scss}line{font-family:\0000365}}
   .menu > .nav > li span {
     display: none;
   }
@@ -4320,6 +4350,7 @@ footer {
   background: none repeat scroll 0 0 #eeeeee;
   margin-left: 220px;
   margin-right: 0;
+  z-index: 1;
   position: relative;
   width: auto;
   border-top-left-radius: 8px;
@@ -4332,7 +4363,7 @@ footer {
     margin-left: 43px;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000315}}
 .content > header {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #eeeeee));
   background: -webkit-linear-gradient(top, #ffffff 0%, #eeeeee 100%);
@@ -4344,7 +4375,7 @@ footer {
   *zoom: 1;
 }
 @media only screen and (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000314}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000315}}
   .content > header {
     margin-top: 0;
     height: 140px;
@@ -4360,7 +4391,7 @@ footer {
 .content > header:after {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000325}}
 .content > header > h1 {
   color: #595959;
   font-size: 28px;
@@ -4372,7 +4403,7 @@ footer {
   margin-top: 20px;
 }
 @media only screen and (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000325}}
   .content > header > h1 {
     float: none;
     text-align: center;
@@ -4380,7 +4411,7 @@ footer {
     margin-left: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000341}}
 .content > header > .actions {
   float: right;
   right: 20px;
@@ -4388,7 +4419,7 @@ footer {
   margin-top: 20px;
 }
 @media only screen and (max-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000341}}
   .content > header > .actions {
     margin-top: 70px;
     margin-bottom: 0;
@@ -4399,7 +4430,7 @@ footer {
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_maincontent\.scss}line{font-family:\0000358}}
 .ng-cloak {
   display: none;
 }
@@ -4440,4 +4471,24 @@ footer {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("../img/loading_indicator.gif");
+}
+
+@media only screen and (max-width: 767px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_loader\.scss}line{font-family:\0000315}}
+  .modal {
+    width: 90%;
+    max-width: 560px;
+    right: 5%;
+    left: auto;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_utilities\.scss}line{font-family:\000031}}
+.visible-phone {
+  display: none;
+}
+@media only screen and (max-width: 480px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Projects\/GIT\/jenkins-ng-client\/app\/sass\/partials\/_utilities\.scss}line{font-family:\000031}}
+  .visible-phone {
+    display: inherit;
+  }
 }

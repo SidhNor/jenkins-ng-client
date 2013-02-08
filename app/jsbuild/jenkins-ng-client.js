@@ -1,6 +1,6 @@
 /**
  * Responsive Angular JS client for Jenins
- * @version v0.0.2 - 2013-02-05
+ * @version v0.0.2 - 2013-02-08
  * @link https://github.com/SidhNor/jenkins-ng-client
  * @license MIT License, http://www.opensource.org/licenses/MIT
  */
@@ -109,7 +109,7 @@ jenkinsClient.controller('JobViewCtrl', ['$scope', '$routeParams', 'View', '$roo
 }
 ]);
 'use strict';
-/*global $:true*/
+/*global $:true */
 
 jenkinsClient.controller('LoginCtrl', ['$scope', 'dialog', '$http', '$rootScope', function LoginCtrl($scope, dialog, $http, $rootScope) {
 	$scope.user = {};
@@ -127,8 +127,9 @@ jenkinsClient.controller('LoginCtrl', ['$scope', 'dialog', '$http', '$rootScope'
 			})
 		.success(function(responseData){
 			$scope.isLoggingIn = false;
-			$rootScope.$broadcast(jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED);
-			dialog.close(user);
+			dialog.close();
+			$rootScope.$broadcast(jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED, user);
+			
 		}).error(function(responseData, status){
 			$scope.isLoggingIn = false;
 			//show validation errors
@@ -180,6 +181,11 @@ jenkinsClient.controller('MenuCtrl', ['$scope', '$location', function MenuCtrl($
 	$scope.enabled = false;
 	$scope.links = [
 		{
+			src: '/',
+			label: 'Dashboard',
+			iconClass: 'icon-home icon-white'
+		},
+		{
 			src: '/status',
 			label: 'Status',
 			iconClass: 'icon-search icon-white'
@@ -224,6 +230,7 @@ jenkinsClient.controller('MenuCtrl', ['$scope', '$location', function MenuCtrl($
 jenkinsClient.controller('ProfileCtrl', ['$scope', '$dialog', function ProfileCtrl($scope, $dialog) {
 
 	var loggedIn = false;
+	var username;
 
 	$scope.opts = {
 		backdrop: true,
@@ -238,28 +245,57 @@ jenkinsClient.controller('ProfileCtrl', ['$scope', '$dialog', function ProfileCt
 	$scope.actions = [
 		{
 			name: 'Login',
-			path: '',
 			icon: ' icon-user'
 		},
 		{
 			name: 'Sign up',
-			path: '',
-			icon: ' icon-user'
+			icon: ' icon-share'
 		}
 	];
 
-	$scope.$on(jenkinsClient.eventNames.AUTH_LOGIN_REQUIRED, function() {
-		var d = $dialog.dialog($scope.opts);
-		d.open().then(function(result){
-			if(result)
-			{
-				
+	$scope.executeAction = function (index){
+		if (loggedIn) {
+			if (index === 0) {
+				//Profile action
+			} else if (index === 1) {
+				//Log out
+				loggedIn = false;
 			}
-		});
+		} else {
+			if (index === 0) {
+				$scope.opts.templateUrl = 'views/login.html';
+				$scope.opts.controller = 'LoginCtrl';
+				popUpAction();
+			} else if (index === 1) {
+				$scope.opts.templateUrl = 'views/register.html';
+				$scope.opts.controller = 'RegisterCtrl';
+				popUpAction();
+			}
+		}
+	};
+
+	$scope.$on(jenkinsClient.eventNames.AUTH_LOGIN_REQUIRED, function() {
+		popUpAction();
 	});
 
-	$scope.$on(jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED, function() {
+	var popUpAction = function (){
+		var d = $dialog.dialog($scope.opts);
+		d.open();
+	};
+
+	$scope.$on(jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED, function(scope, data) {
+		username = data.j_username;
 		loggedIn = true;
+	});
+
+	$scope.$watch(function(){return loggedIn;}, function() {
+		if (loggedIn) {
+			$scope.actions[0].name = username;
+			$scope.actions[1].name = 'Log out';
+		} else {
+			$scope.actions[0].name = 'Login';
+			$scope.actions[1].name = 'Sign up';
+		}
 	});
 
 }

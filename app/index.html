@@ -14,7 +14,7 @@
 		<h1>Jenkins</h1>
 		<div ng-controller="ProfileCtrl" class="profile-nav">
 			<div class="btn-group">
-				<button class="btn btn-inverse" ng-repeat="action in actions">
+				<button class="btn btn-inverse" ng-repeat="action in actions" ng-click="executeAction($index)">
 					<i class="icon icon-white" ng-class="action.icon"></i>
 					<span class="text">{{action.name}}</span>
 				</button>
@@ -22,6 +22,7 @@
 		</div>
 	</header>
 	<aside ng-controller="MenuCtrl" class="menu" ng-class="{disabled: !enabled}">
+		<a href="launchTask(link)" class="visible-phone"><i ng-class="link.iconClass"></i>{{link.label}}</a>
 		<ul class="nav">
 			<li ng-repeat="link in links">
 				<a ng-click="launchTask(link)" class="ng-cloak">

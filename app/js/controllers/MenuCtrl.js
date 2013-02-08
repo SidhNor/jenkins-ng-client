@@ -5,6 +5,11 @@ jenkinsClient.controller('MenuCtrl', ['$scope', '$location', function MenuCtrl($
 	$scope.enabled = false;
 	$scope.links = [
 		{
+			src: '/',
+			label: 'Dashboard',
+			iconClass: 'icon-home icon-white'
+		},
+		{
 			src: '/status',
 			label: 'Status',
 			iconClass: 'icon-search icon-white'

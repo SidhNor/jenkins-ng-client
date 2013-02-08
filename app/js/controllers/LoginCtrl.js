@@ -1,5 +1,5 @@
 'use strict';
-/*global $:true*/
+/*global $:true */
 
 jenkinsClient.controller('LoginCtrl', ['$scope', 'dialog', '$http', '$rootScope', function LoginCtrl($scope, dialog, $http, $rootScope) {
 	$scope.user = {};
@@ -17,8 +17,9 @@ jenkinsClient.controller('LoginCtrl', ['$scope', 'dialog', '$http', '$rootScope'
 			})
 		.success(function(responseData){
 			$scope.isLoggingIn = false;
-			$rootScope.$broadcast(jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED);
-			dialog.close(user);
+			dialog.close();
+			$rootScope.$broadcast(jenkinsClient.eventNames.AUTH_LOGIN_CONFIRMED, user);
+			
 		}).error(function(responseData, status){
 			$scope.isLoggingIn = false;
 			//show validation errors
